@@ -1,0 +1,251 @@
+@use "../abstracts/variables" as *;
+
+// ====== Admission Process Styling ======
+.admission-process {
+    padding: $section-spacing-mobile 0;
+
+    .admission-process__header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .admission-process__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .admission-process__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: $color-text-primary;
+    }
+
+    .admission-process__description {
+        color: $color-text-secondary;
+        line-height: 1.6;
+    }
+
+    .admission-process__link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $color-accent;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .admission-process__link i {
+        font-size: 0.875rem;
+        transition: transform 0.3s ease;
+    }
+
+    .admission-process__steps {
+        display: flex;
+        flex-direction: column;
+        gap: $card-gap;
+        margin-top: 2rem;
+    }
+
+    .admission-process__step {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .admission-process__step::after {
+        content: "";
+        position: absolute;
+        top: 2.5rem;
+        left: 1rem;
+        width: 2px;
+        height: calc(100% - 2.5rem);
+        background-color: rgba($color-accent, 0.25);
+    }
+
+    .admission-process__step:last-child::after {
+        display: none;
+    }
+
+    .admission-process__step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        aspect-ratio: 1;
+        margin-right: 2.5rem;
+        flex-shrink: 0;
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: $color-surface;
+        background-color: $color-accent;
+        border-radius: 50%;
+    }
+
+    .admission-process__step-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        margin-right: 0.75rem;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        border-radius: $radius-md;
+        background-color: $color-surface;
+        box-shadow: $shadow-sm;
+    }
+
+    .admission-process__step-icon i {
+        font-size: 1.5rem;
+        color: $color-accent;
+    }
+
+    .admission-process__step-icon {
+        transition: transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .admission-process__step-icon:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: $shadow-md;
+    }
+
+    .admission-process__step-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .admission-process__step-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.3;
+        color: $color-text-primary;
+    }
+
+    .admission-process__step-description {
+        color: $color-text-secondary;
+        line-height: 1.6;
+    }
+
+    .admission-process__step-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $color-accent;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .admission-process__step-link i {
+        font-size: 0.875rem;
+        transition: transform 0.3s ease;
+    }
+
+    .admission-process__link:hover i,
+    .admission-process__step-link:hover i {
+        transform: translateX(0.25rem);
+    }
+
+    .admission-process__cta {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .admission-process__cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+    }
+
+    .admission-process__cta-button {
+        padding: 0.875rem 1.25rem;
+        border-radius: $radius-md;
+        background-color: $color-accent;
+        color: $color-surface;
+    }
+
+    .admission-process__cta-button {
+        transition: transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background-color 0.3s ease;
+    }
+
+    .admission-process__cta-button:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: $shadow-md;
+    }
+}
+
+
+// ====== Admission Process Desktop & Tablet Layout ======
+@media (min-width: 768px) {
+
+    .admission-process {
+
+        .admission-process__steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .admission-process__step {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 3rem 1.5rem 1.5rem;
+            border-radius: $radius-lg;
+            background-color: $color-surface;
+            box-shadow: $shadow-md;
+        }
+
+        .admission-process__step-number {
+            position: absolute;
+            top: -1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .admission-process__step::after {
+            display: none;
+        }
+
+        .admission-process__step-content {
+            align-items: center;
+            flex: initial;
+            height: 100%;
+        }
+
+        .admission-process__step-icon {
+            width: 3.5rem;
+            box-shadow: $shadow-md;
+        }
+
+        .admission-process__step-link {
+            margin-top: auto;
+        }
+
+        .admission-process__header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,0 +1,320 @@
+@use "../abstracts/variables" as *;
+
+// ====== Header Styling ======
+.header {
+    background-color: $color-surface;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    position: relative;
+}
+
+.nav__toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    i {
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+}
+
+.nav__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    z-index: 1000;
+    padding: 1.25rem;
+    background-color: $color-surface;
+    border-top: 1px solid rgba(148, 163, 184, 0.12);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-0.5rem);
+
+    transition:
+        opacity 0.2s ease,
+        visibility 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nav__links--active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.nav__item {
+    width: 100%;
+}
+
+.nav__link {
+    display: block;
+    padding: 0.875rem 1rem;
+    color: $color-text-primary;
+    font-weight: 500;
+    border-radius: 0.75rem;
+
+    transition:
+        color 0.3s ease;
+
+}
+
+.nav__link:hover {
+    background-color: rgba(37, 99, 235, 0.06);
+}
+
+.nav__link:active {
+    background-color: rgba(37, 99, 235, 0.12);
+}
+
+.nav__link:focus-visible {
+    outline: none;
+    background-color: rgba(21, 94, 117, 0.06);
+    box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
+}
+
+.nav__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.75rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.nav__brand:focus-visible {
+    outline: none;
+    border-radius: 0.75rem;
+    background-color: rgba(21, 94, 117, 0.04);
+    box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.12);
+}
+
+.nav__logo {
+    font-size: 1.75rem;
+    color: $color-accent;
+    flex-shrink: 0;
+}
+
+.nav__brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.nav__brand-name {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+    color: $color-primary;
+}
+
+.nav__brand-subtitle {
+    font-size: 0.55rem;
+    font-weight: 600;
+    letter-spacing: 0.16rem;
+    color: $color-primary;
+}
+
+.nav__actions {
+    margin-left: auto;
+}
+
+.nav__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: 1.8px solid $color-accent;
+    border-radius: 999px;
+    background-color: transparent;
+    color: $color-accent;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    flex-shrink: 0;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    min-height: 2.5rem;
+
+    i {
+        font-size: 0.875rem;
+    }
+}
+
+.nav__cta:hover {
+    background-color: $color-accent;
+    color: $color-surface;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(21, 94, 117, 0.18);
+}
+
+.nav__cta:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.nav__cta:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(21, 94, 117, 0.18);
+    background-color: rgba(21, 94, 117, 0.06);
+}
+
+
+// ====== MEDIA QUERIES ======
+// Desktop
+@media (min-width: 64rem) {
+    .nav__toggle {
+        display: none;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    .nav__links {
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        margin-left: auto;
+
+        top: auto;
+        left: auto;
+        right: auto;
+        padding: 0;
+        background-color: transparent;
+        border-top: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        overflow: visible;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+        gap: 0.25rem;
+    }
+
+    .nav__link {
+        position: relative;
+
+        white-space: nowrap;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9375rem;
+    }
+
+    .nav__link::after {
+        content: "";
+        position: absolute;
+
+        left: 0.85rem;
+        bottom: 0.35rem;
+        width: 0;
+        height: 2px;
+        background-color: $color-accent;
+
+        transition: width 0.3s ease;
+    }
+
+    .nav__link:hover::after {
+        width: calc(100% - 1.7rem);
+    }
+
+    .nav__link:hover {
+        background-color: transparent;
+        color: $color-accent;
+    }
+
+    .nav {
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .nav__actions {
+        flex-shrink: 0;
+    }
+
+    .nav__brand {
+        // flex: 0 0 auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+    }
+
+    .nav__logo {
+        font-size: 2.5rem;
+    }
+
+    .nav__brand-text {
+        justify-content: center;
+        gap: 0.05rem;
+        font-size: 1.25rem;
+    }
+
+    .nav__brand-name {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0.02rem;
+    }
+
+    .nav__brand-subtitle {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.28rem;
+    }
+
+    .nav__cta {
+        padding: 0.75rem 1.25rem;
+        border: 2px solid $color-accent;
+        font-size: 0.875rem;
+    }
+
+    .nav__item {
+        width: auto;
+    }
+}
+
+// Tablet
+@media (min-width: 48rem) {
+    .nav__logo {
+        font-size: 2rem;
+    }
+
+    .nav__brand-name {
+        font-size: 1.15rem;
+    }
+
+    .nav__brand-subtitle {
+        font-size: 0.6rem;
+        letter-spacing: 0.18rem;
+    }
+}
