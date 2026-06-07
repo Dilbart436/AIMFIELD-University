@@ -59,3 +59,26 @@ const heroSlider = new Swiper(".hero__slider", {
         clickable: true,
     },
 });
+
+
+// ====== Placement Support Slider ======
+const placementSlider = new Swiper(".placement-support__slider", {
+    loop: true,
+
+    spaceBetween: 16,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    breakpoints: {
+        768: {
+            slidesPerView: 1.5,
+        },
+
+        1024: {
+            slidesPerView: 2.5,
+        },
+    },
+});

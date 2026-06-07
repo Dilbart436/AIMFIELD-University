@@ -2,685 +2,945 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/main.min.css">
-    <title>AIMFIELD University</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- Swiper CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="./css/main.min.css">
+   <title>AIMFIELD University</title>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
+   <!-- Header -->
+   <header class="header">
+      <div class="container">
 
-            <nav class="nav" aria-label="Primary navigation">
+         <nav class="nav" aria-label="Primary navigation">
 
-                <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
-                    aria-controls="primary-navigation">
-                    <i class="fa-solid fa-bars nav__toggle-icon" aria-hidden="true"></i>
-                </button>
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+               aria-controls="primary-navigation">
+               <i class="fa-solid fa-bars nav__toggle-icon" aria-hidden="true"></i>
+            </button>
 
-                <a class="nav__brand" href="/">
-                    <i class="fa-solid fa-graduation-cap nav__logo" aria-hidden="true"></i>
-                    <span class="nav__brand-text">
-                        <span class="nav__brand-name">AIMFIELD</span>
-                        <span class="nav__brand-subtitle">UNIVERSITY</span>
-                    </span>
-                </a>
+            <a class="nav__brand" href="/">
+               <i class="fa-solid fa-graduation-cap nav__logo" aria-hidden="true"></i>
+               <span class="nav__brand-text">
+                  <span class="nav__brand-name">AIMFIELD</span>
+                  <span class="nav__brand-subtitle">UNIVERSITY</span>
+               </span>
+            </a>
 
-                <ul class="nav__links" id="primary-navigation">
-                    <li class="nav__item">
-                        <a class="nav__link" href="#about">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#programs">Departments</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#campus-life">Campus Life</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#admission-process">Admissions</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#news">News</a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+            <ul class="nav__links" id="primary-navigation">
+               <li class="nav__item">
+                  <a class="nav__link" href="#about">About</a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link" href="#programs">Departments</a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link" href="#campus-life">Campus Life</a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link" href="#admission-process">Admissions</a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link" href="#news">News</a>
+               </li>
+               <li class="nav__item">
+                  <a class="nav__link" href="#contact">Contact</a>
+               </li>
+            </ul>
 
-                <div class="nav__actions">
-                    <a class="nav__cta" href="#auth">
-                        <i class="fa-regular fa-user" aria-hidden="true"></i>
-                        <span>Login/Signup</span>
-                    </a>
-                </div>
+            <div class="nav__actions">
+               <a class="nav__cta" href="#auth">
+                  <i class="fa-regular fa-user" aria-hidden="true"></i>
+                  <span>Login/Signup</span>
+               </a>
+            </div>
 
-            </nav>
+         </nav>
 
-        </div>
-    </header>
+      </div>
+   </header>
 
-    <main class="main">
-        <!-- Hero -->
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container">
+   <main class="main">
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-title">
+         <div class="container">
 
-                <div class="hero__content">
-                    <span class="hero__eyebrow">
-                        Shape Your Future
-                    </span>
+            <div class="hero__content">
+               <span class="hero__eyebrow">
+                  Shape Your Future
+               </span>
 
-                    <h1 class="hero__title" id="hero-title">
-                        Learn Without Limits at Aimfield University
-                    </h1>
+               <h1 class="hero__title" id="hero-title">
+                  Learn Without Limits at Aimfield University
+               </h1>
 
-                    <p class="hero__description">
-                        Build real-world skills, explore modern programs,
-                        and prepare for a successful career.
-                    </p>
+               <p class="hero__description">
+                  Build real-world skills, explore modern programs,
+                  and prepare for a successful career.
+               </p>
 
-                    <!-- Hero actions -->
-                    <div class="hero__actions">
-                        <a class="hero__button hero__button--primary" href="#admissions">
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                            <span>Apply Now</span>
-                        </a>
+               <!-- Hero actions -->
+               <div class="hero__actions">
+                  <a class="hero__button hero__button--primary" href="#admissions">
+                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                     <span>Apply Now</span>
+                  </a>
 
-                        <a class="hero__button hero__button--secondary" href="#programs">
-                            <i class="fa-regular fa-image" aria-hidden="true"></i>
-                            <span>Explore Programs</span>
-                        </a>
-                    </div>
+                  <a class="hero__button hero__button--secondary" href="#programs">
+                     <i class="fa-regular fa-image" aria-hidden="true"></i>
+                     <span>Explore Programs</span>
+                  </a>
+               </div>
 
-                </div>
+            </div>
 
-                <div class="hero__media">
-                    <div class="hero__slider swiper">
-                        <div class="swiper-wrapper">
+            <div class="hero__media">
+               <div class="hero__slider swiper">
+                  <div class="swiper-wrapper">
 
-                            <article class="hero__slide swiper-slide">
-                                <div class="hero__illustration">
-                                    <img class="hero__image" src="./img/hero/hero-students.jpg"
-                                        alt="Students studying together at Aimfield University">
-                                </div>
-                            </article>
-
-                            <article class="hero__slide swiper-slide">
-                                <div class="hero__illustration">
-                                    <img class="hero__image" src="./img/hero/hero-campus.jpg"
-                                        alt="Modern campus learning environment at Aimfield University">
-                                </div>
-                            </article>
-
-                            <article class="hero__slide swiper-slide">
-                                <div class="hero__illustration">
-                                    <img class="hero__image" src="./img/hero/hero-graduation.jpg"
-                                        alt="Graduation celebration at Aimfield University">
-                                </div>
-                            </article>
-
+                     <article class="hero__slide swiper-slide">
+                        <div class="hero__illustration">
+                           <img class="hero__image" src="./img/hero/hero-students.jpg"
+                              alt="Students studying together at Aimfield University">
                         </div>
+                     </article>
 
-                    </div>
+                     <article class="hero__slide swiper-slide">
+                        <div class="hero__illustration">
+                           <img class="hero__image" src="./img/hero/hero-campus.jpg"
+                              alt="Modern campus learning environment at Aimfield University">
+                        </div>
+                     </article>
 
-                    <button class="hero__navigation hero__navigation--prev" type="button" aria-label="Previous slide">
-                        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                    </button>
+                     <article class="hero__slide swiper-slide">
+                        <div class="hero__illustration">
+                           <img class="hero__image" src="./img/hero/hero-graduation.jpg"
+                              alt="Graduation celebration at Aimfield University">
+                        </div>
+                     </article>
 
-                    <button class="hero__navigation hero__navigation--next" type="button" aria-label="Next slide">
-                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                    </button>
+                  </div>
 
-                    <div class="hero__pagination"></div>
+               </div>
 
-                </div>
-            </div>
+               <button class="hero__navigation hero__navigation--prev" type="button" aria-label="Previous slide">
+                  <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+               </button>
 
-        </section>
+               <button class="hero__navigation hero__navigation--next" type="button" aria-label="Next slide">
+                  <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+               </button>
 
-        <!-- Search -->
-        <section class="search" aria-label="Program search">
-            <div class="container">
-
-                <form class="search__form" action="#">
-                    <!-- Search Input Group -->
-                    <div class="search__input-group">
-
-                        <i class="fa-solid fa-magnifying-glass search__icon" aria-hidden="true"></i>
-
-                        <input class="search__input" type="search" name="search"
-                            placeholder="Search programs, departments, events..." aria-label="Search programs" />
-
-                        <button class="search__button" type="submit" aria-label="Submit search">
-                            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                        </button>
-
-                    </div>
-
-                    <!-- Search Categories -->
-                    <div class="search__categories">
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-flask" aria-hidden="true"></i>
-                            <span>Science</span>
-                        </button>
-
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
-                            <span>Commerce</span>
-                        </button>
-
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-palette" aria-hidden="true"></i>
-                            <span>Arts</span>
-                        </button>
-
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-gear" aria-hidden="true"></i>
-                            <span>Engineering</span>
-                        </button>
-
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
-                            <span>Law</span>
-                        </button>
-
-                        <button class="search__category" type="button">
-                            <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
-                            <span>More</span>
-                        </button>
-                    </div>
-                </form>
+               <div class="hero__pagination"></div>
 
             </div>
-        </section>
+         </div>
 
-        <!-- Featured Programs -->
-        <section class="featured-programs">
-            <div class="container">
+      </section>
 
-                <div class="featured-programs__header">
-                    <div class="featured-programs__heading">
-                        <h2 class="featured-programs__title">
-                            Featured Programs
-                        </h2>
-                        <p class="featured-programs__description">
-                            Discover our most popular programs across streams
-                        </p>
-                    </div>
-                    <a href="#" class="featured-programs__view-all">
-                        View All Programs
+      <!-- Search -->
+      <section class="search" aria-label="Program search">
+         <div class="container">
+
+            <form class="search__form" action="#">
+               <!-- Search Input Group -->
+               <div class="search__input-group">
+
+                  <i class="fa-solid fa-magnifying-glass search__icon" aria-hidden="true"></i>
+
+                  <input class="search__input" type="search" name="search"
+                     placeholder="Search programs, departments, events..." aria-label="Search programs" />
+
+                  <button class="search__button" type="submit" aria-label="Submit search">
+                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                  </button>
+
+               </div>
+
+               <!-- Search Categories -->
+               <div class="search__categories">
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-flask" aria-hidden="true"></i>
+                     <span>Science</span>
+                  </button>
+
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                     <span>Commerce</span>
+                  </button>
+
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-palette" aria-hidden="true"></i>
+                     <span>Arts</span>
+                  </button>
+
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                     <span>Engineering</span>
+                  </button>
+
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                     <span>Law</span>
+                  </button>
+
+                  <button class="search__category" type="button">
+                     <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+                     <span>More</span>
+                  </button>
+               </div>
+            </form>
+
+         </div>
+      </section>
+
+      <!-- Featured Programs -->
+      <section class="featured-programs">
+         <div class="container">
+
+            <div class="featured-programs__header">
+               <div class="featured-programs__heading">
+                  <h2 class="featured-programs__title">
+                     Featured Programs
+                  </h2>
+                  <p class="featured-programs__description">
+                     Discover our most popular programs across streams
+                  </p>
+               </div>
+               <a href="#" class="featured-programs__view-all">
+                  View All Programs
+                  <i class="fa-solid fa-arrow-right"></i>
+               </a>
+            </div>
+
+            <div class="featured-programs__grid">
+               <!-- BCA -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-computer"></i>
+                  </div>
+
+                  <div class="program-card__content">
+                     <h3 class="program-card__title">
+                        BCA
+                     </h3>
+                     <p class="program-card__subtitle">
+                        Bachelor of Computer Applications
+                     </p>
+                     <p class="program-card__description">
+                        Build skills in software, coding, and modern IT systems.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+               <!-- BBA -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-briefcase"></i>
+                  </div>
+
+                  <div class="program-card__content">
+                     <h3 class="program-card__title">
+                        BBA
+                     </h3>
+                     <p class="program-card__subtitle">
+                        Bachelor of Business Administration
+                     </p>
+                     <p class="program-card__description">
+                        Learn business, management and leadership skills.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+               <!-- BSc -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-flask"></i>
+                  </div>
+
+                  <div class="program-card__content">
+
+                     <h3 class="program-card__title">
+                        BSc
+                     </h3>
+
+                     <p class="program-card__subtitle">
+                        Bachelor of Science
+                     </p>
+
+                     <p class="program-card__description">
+                        Explore physics, chemistry, biology and data science.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+               <!-- BA -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-palette"></i>
+                  </div>
+
+                  <div class="program-card__content">
+                     <h3 class="program-card__title">
+                        BA
+                     </h3>
+                     <p class="program-card__subtitle">
+                        Bachelor of Arts
+                     </p>
+                     <p class="program-card__description">
+                        Study humanities, social sciences, and creative disciplines.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+               <!-- MBA -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-chart-column"></i>
+                  </div>
+
+                  <div class="program-card__content">
+                     <h3 class="program-card__title">
+                        MBA
+                     </h3>
+                     <p class="program-card__subtitle">
+                        Master of Business Administration
+                     </p>
+                     <p class="program-card__description">
+                        Advance your career with strategic and managerial expertise.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+               <!-- LLB -->
+               <article class="program-card">
+                  <div class="program-card__icon">
+                     <i class="fa-solid fa-scale-balanced"></i>
+                  </div>
+
+                  <div class="program-card__content">
+                     <h3 class="program-card__title">
+                        LLB
+                     </h3>
+                     <p class="program-card__subtitle">
+                        Bachelor of Laws
+                     </p>
+                     <p class="program-card__description">
+                        Build a career in law, justice, and legal studies.
+                     </p>
+                  </div>
+
+                  <a href="#" class="program-card__link">
+                     Explore
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+               </article>
+
+            </div>
+
+         </div>
+
+      </section>
+
+      <!-- Admission Process -->
+      <section class="admission-process">
+         <div class="container">
+            <div class="admission-process__header">
+               <div class="admission-process__content">
+                  <h2 class="admission-process__title">
+                     Admission Process
+                  </h2>
+                  <p class="admission-process__description">
+                     Follow these simple steps to begin your journey at AIMFIELD University.
+                  </p>
+               </div>
+
+               <a href="#" class="admission-process__link">
+                  <span>Learn More About Admissions</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+               </a>
+            </div>
+
+            <ol class="admission-process__steps">
+               <li class="admission-process__step">
+                  <span class="admission-process__step-number">
+                     1
+                  </span>
+
+                  <div class="admission-process__step-icon">
+                     <i class="fa-solid fa-book-open"></i>
+                  </div>
+
+                  <div class="admission-process__step-content">
+                     <h3 class="admission-process__step-title">
+                        Choose Program
+                     </h3>
+
+                     <p class="admission-process__step-description">
+                        Explore our academic programs and select the one that aligns with your goals.
+                     </p>
+
+                     <a href="#" class="admission-process__step-link">
+                        <span>Learn More</span>
                         <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+                     </a>
+                  </div>
+               </li>
 
-                <div class="featured-programs__grid">
-                    <!-- BCA -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-computer"></i>
-                        </div>
+               <li class="admission-process__step">
+                  <span class="admission-process__step-number">
+                     2
+                  </span>
 
-                        <div class="program-card__content">
-                            <h3 class="program-card__title">
-                                BCA
-                            </h3>
-                            <p class="program-card__subtitle">
-                                Bachelor of Computer Applications
-                            </p>
-                            <p class="program-card__description">
-                                Build skills in software, coding, and modern IT systems.
-                            </p>
-                        </div>
+                  <div class="admission-process__step-icon">
+                     <i class="fa-solid fa-file-pen"></i>
+                  </div>
 
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
+                  <div class="admission-process__step-content">
+                     <h3 class="admission-process__step-title">
+                        Fill Application
+                     </h3>
 
-                    <!-- BBA -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-briefcase"></i>
-                        </div>
+                     <p class="admission-process__step-description">
+                        Complete the online application form with accurate academic and personal information.
+                     </p>
 
-                        <div class="program-card__content">
-                            <h3 class="program-card__title">
-                                BBA
-                            </h3>
-                            <p class="program-card__subtitle">
-                                Bachelor of Business Administration
-                            </p>
-                            <p class="program-card__description">
-                                Learn business, management and leadership skills.
-                            </p>
-                        </div>
-
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
-
-                    <!-- BSc -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-flask"></i>
-                        </div>
-
-                        <div class="program-card__content">
-
-                            <h3 class="program-card__title">
-                                BSc
-                            </h3>
-
-                            <p class="program-card__subtitle">
-                                Bachelor of Science
-                            </p>
-
-                            <p class="program-card__description">
-                                Explore physics, chemistry, biology and data science.
-                            </p>
-                        </div>
-
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
-
-                    <!-- BA -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-palette"></i>
-                        </div>
-
-                        <div class="program-card__content">
-                            <h3 class="program-card__title">
-                                BA
-                            </h3>
-                            <p class="program-card__subtitle">
-                                Bachelor of Arts
-                            </p>
-                            <p class="program-card__description">
-                                Study humanities, social sciences, and creative disciplines.
-                            </p>
-                        </div>
-
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
-
-                    <!-- MBA -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-chart-column"></i>
-                        </div>
-
-                        <div class="program-card__content">
-                            <h3 class="program-card__title">
-                                MBA
-                            </h3>
-                            <p class="program-card__subtitle">
-                                Master of Business Administration
-                            </p>
-                            <p class="program-card__description">
-                                Advance your career with strategic and managerial expertise.
-                            </p>
-                        </div>
-
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
-
-                    <!-- LLB -->
-                    <article class="program-card">
-                        <div class="program-card__icon">
-                            <i class="fa-solid fa-scale-balanced"></i>
-                        </div>
-
-                        <div class="program-card__content">
-                            <h3 class="program-card__title">
-                                LLB
-                            </h3>
-                            <p class="program-card__subtitle">
-                                Bachelor of Laws
-                            </p>
-                            <p class="program-card__description">
-                                Build a career in law, justice, and legal studies.
-                            </p>
-                        </div>
-
-                        <a href="#" class="program-card__link">
-                            Explore
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- Admission Process -->
-        <section class="admission-process">
-            <div class="container">
-                <div class="admission-process__header">
-                    <div class="admission-process__content">
-                        <h2 class="admission-process__title">
-                            Admission Process
-                        </h2>
-                        <p class="admission-process__description">
-                            Follow these simple steps to begin your journey at AIMFIELD University.
-                        </p>
-                    </div>
-
-                    <a href="#" class="admission-process__link">
-                        <span>Learn More About Admissions</span>
+                     <a href="#" class="admission-process__step-link">
+                        <span>Learn More</span>
                         <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
+                     </a>
+                  </div>
+               </li>
 
-                <ol class="admission-process__steps">
-                    <li class="admission-process__step">
-                        <span class="admission-process__step-number">
-                            1
-                        </span>
+               <li class="admission-process__step">
+                  <span class="admission-process__step-number">
+                     3
+                  </span>
 
-                        <div class="admission-process__step-icon">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
+                  <div class="admission-process__step-icon">
+                     <i class="fa-solid fa-file-arrow-up"></i>
+                  </div>
 
-                        <div class="admission-process__step-content">
-                            <h3 class="admission-process__step-title">
-                                Choose Program
-                            </h3>
+                  <div class="admission-process__step-content">
+                     <h3 class="admission-process__step-title">
+                        Upload Documents
+                     </h3>
 
-                            <p class="admission-process__step-description">
-                                Explore our academic programs and select the one that aligns with your goals.
-                            </p>
+                     <p class="admission-process__step-description">
+                        Submit the required academic records and supporting documents for review.
+                     </p>
 
-                            <a href="#" class="admission-process__step-link">
-                                <span>Learn More</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
+                     <a href="#" class="admission-process__step-link">
+                        <span>Learn More</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </a>
+                  </div>
+               </li>
 
-                    <li class="admission-process__step">
-                        <span class="admission-process__step-number">
-                            2
-                        </span>
+               <li class="admission-process__step">
+                  <span class="admission-process__step-number">
+                     4
+                  </span>
 
-                        <div class="admission-process__step-icon">
-                            <i class="fa-solid fa-file-pen"></i>
-                        </div>
+                  <div class="admission-process__step-icon">
+                     <i class="fa-solid fa-circle-check"></i>
+                  </div>
 
-                        <div class="admission-process__step-content">
-                            <h3 class="admission-process__step-title">
-                                Fill Application
-                            </h3>
+                  <div class="admission-process__step-content">
+                     <h3 class="admission-process__step-title">
+                        Confirm Admission
+                     </h3>
 
-                            <p class="admission-process__step-description">
-                                Complete the online application form with accurate academic and personal information.
-                            </p>
+                     <p class="admission-process__step-description">
+                        Accept your offer and complete enrollment to secure your place.
+                     </p>
 
-                            <a href="#" class="admission-process__step-link">
-                                <span>Learn More</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
+                     <a href="#" class="admission-process__step-link">
+                        <span>Learn More</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </a>
+                  </div>
+               </li>
+            </ol>
 
-                    <li class="admission-process__step">
-                        <span class="admission-process__step-number">
-                            3
-                        </span>
-
-                        <div class="admission-process__step-icon">
-                            <i class="fa-solid fa-file-arrow-up"></i>
-                        </div>
-
-                        <div class="admission-process__step-content">
-                            <h3 class="admission-process__step-title">
-                                Upload Documents
-                            </h3>
-
-                            <p class="admission-process__step-description">
-                                Submit the required academic records and supporting documents for review.
-                            </p>
-
-                            <a href="#" class="admission-process__step-link">
-                                <span>Learn More</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="admission-process__step">
-                        <span class="admission-process__step-number">
-                            4
-                        </span>
-
-                        <div class="admission-process__step-icon">
-                            <i class="fa-solid fa-circle-check"></i>
-                        </div>
-
-                        <div class="admission-process__step-content">
-                            <h3 class="admission-process__step-title">
-                                Confirm Admission
-                            </h3>
-
-                            <p class="admission-process__step-description">
-                                Accept your offer and complete enrollment to secure your place.
-                            </p>
-
-                            <a href="#" class="admission-process__step-link">
-                                <span>Learn More</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </li>
-                </ol>
-
-                <div class="admission-process__cta">
-                    <a href="#" class="admission-process__cta-button">
-                        <i class="fa-regular fa-calendar"></i>
-                        <span>Check Important Dates</span>
-                    </a>
-                </div>
+            <div class="admission-process__cta">
+               <a href="#" class="admission-process__cta-button">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>Check Important Dates</span>
+               </a>
             </div>
-        </section>
+         </div>
+      </section>
 
-        <!-- Campus Life -->
-        <section class="campus-life">
-            <div class="container">
+      <!-- Campus Life -->
+      <section class="campus-life">
+         <div class="container">
 
-                <div class="campus-life__header">
-                    <div class="campus-life__content">
-                        <h2 class="campus-life__title">
-                            Campus Life
-                        </h2>
-                        <p class="campus-life__description">
-                            Experience a vibrant and inspiring life beyond academics.
-                        </p>
-                    </div>
-                    <a href="#" class="campus-life__cta">
-                        <span class="campus-life__cta-text">
-                            Explore Campus Life
+            <div class="campus-life__header">
+               <div class="campus-life__content">
+                  <h2 class="campus-life__title">
+                     Campus Life
+                  </h2>
+                  <p class="campus-life__description">
+                     Experience a vibrant and inspiring life beyond academics.
+                  </p>
+               </div>
+               <a href="#" class="campus-life__cta">
+                  <span class="campus-life__cta-text">
+                     Explore Campus Life
+                  </span>
+                  <span class="campus-life__cta-icon">
+                     <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+               </a>
+            </div>
+
+            <div class="campus-life__slider">
+               <!-- Card-1 -->
+               <article class="campus-life__card">
+                  <div class="campus-life__image-wrapper">
+                     <img src="./img/campus-life/campus-life-1.jpg" alt="Students participating in campus activities"
+                        class="campus-life__image">
+                  </div>
+
+                  <div class="campus-life__card-content">
+                     <div class="campus-life__card-header">
+                        <div class="campus-life__icon">
+                           <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="campus-life__card-title">
+                           Clubs & Activities
+                        </h3>
+                     </div>
+                     <p class="campus-life__card-description">
+                        Explore a vibrant campus community through events, leadership opportunities, and
+                        meaningful student experiences.
+                     </p>
+                     <a href="#" class="campus-life__link">
+                        <span class="campus-life__link-text">
+                           Learn More
                         </span>
-                        <span class="campus-life__cta-icon">
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <span class="campus-life__link-icon">
+                           <i class="fa-solid fa-arrow-right"></i>
                         </span>
-                    </a>
-                </div>
+                     </a>
+                  </div>
+               </article>
+               <!-- Card-2 -->
+               <article class="campus-life__card">
+                  <div class="campus-life__image-wrapper">
+                     <img src="./img/campus-life/campus-life-2.jpg"
+                        alt="Students participating in sports and fitness activities" class="campus-life__image">
+                  </div>
 
-                <div class="campus-life__slider">
-                    <!-- Card-1 -->
-                    <article class="campus-life__card">
-                        <div class="campus-life__image-wrapper">
-                            <img src="./img/campus-life/campus-life-1.jpg"
-                                alt="Students participating in campus activities" class="campus-life__image">
+                  <div class="campus-life__card-content">
+                     <div class="campus-life__card-header">
+                        <div class="campus-life__icon">
+                           <i class="fa-solid fa-dumbbell"></i>
                         </div>
 
-                        <div class="campus-life__card-content">
-                            <div class="campus-life__card-header">
-                                <div class="campus-life__icon">
-                                    <i class="fa-solid fa-users"></i>
-                                </div>
-                                <h3 class="campus-life__card-title">
-                                    Clubs & Activities
-                                </h3>
-                            </div>
-                            <p class="campus-life__card-description">
-                                Explore a vibrant campus community through events, leadership opportunities, and
-                                meaningful student experiences.
-                            </p>
-                            <a href="#" class="campus-life__link">
-                                <span class="campus-life__link-text">
-                                    Learn More
-                                </span>
-                                <span class="campus-life__link-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Card-2 -->
-                    <article class="campus-life__card">
-                        <div class="campus-life__image-wrapper">
-                            <img src="./img/campus-life/campus-life-2.jpg"
-                                alt="Students participating in sports and fitness activities"
-                                class="campus-life__image">
-                        </div>
+                        <h3 class="campus-life__card-title">
+                           Sports & Fitness
+                        </h3>
+                     </div>
 
-                        <div class="campus-life__card-content">
-                            <div class="campus-life__card-header">
-                                <div class="campus-life__icon">
-                                    <i class="fa-solid fa-dumbbell"></i>
-                                </div>
+                     <p class="campus-life__card-description">
+                        Stay active through sports programs,
+                        fitness facilities, and recreational activities that promote student wellness.
+                     </p>
 
-                                <h3 class="campus-life__card-title">
-                                    Sports & Fitness
-                                </h3>
-                            </div>
+                     <a href="#" class="campus-life__link">
+                        <span class="campus-life__link-text">
+                           Learn More
+                        </span>
+                        <span class="campus-life__link-icon">
+                           <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                     </a>
+                  </div>
+               </article>
+               <!-- Card-3 -->
+               <article class="campus-life__card">
+                  <div class="campus-life__image-wrapper">
+                     <img src="./img/campus-life/campus-life-3.jpg" alt="Students collaborating in university clubs"
+                        class="campus-life__image">
+                  </div>
 
-                            <p class="campus-life__card-description">
-                                Stay active through sports programs,
-                                fitness facilities, and recreational activities that promote student wellness.
-                            </p>
-
-                            <a href="#" class="campus-life__link">
-                                <span class="campus-life__link-text">
-                                    Learn More
-                                </span>
-                                <span class="campus-life__link-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
-                        </div>
-                    </article>
-                    <!-- Card-3 -->
-                    <article class="campus-life__card">
-                        <div class="campus-life__image-wrapper">
-                            <img src="./img/campus-life/campus-life-3.jpg"
-                                alt="Students collaborating in university clubs" class="campus-life__image">
+                  <div class="campus-life__card-content">
+                     <div class="campus-life__card-header">
+                        <div class="campus-life__icon">
+                           <i class="fa-solid fa-bed"></i>
                         </div>
 
-                        <div class="campus-life__card-content">
-                            <div class="campus-life__card-header">
-                                <div class="campus-life__icon">
-                                    <i class="fa-solid fa-bed"></i>
-                                </div>
+                        <h3 class="campus-life__card-title">
+                           Hostel Facilities
+                        </h3>
+                     </div>
 
-                                <h3 class="campus-life__card-title">
-                                    Hostel Facilities
-                                </h3>
-                            </div>
+                     <p class="campus-life__card-description">
+                        Experience comfortable hostel living with
+                        modern facilities, study areas, and residential services throughout campus.
+                     </p>
 
-                            <p class="campus-life__card-description">
-                                Experience comfortable hostel living with
-                                modern facilities, study areas, and residential services throughout campus.
-                            </p>
+                     <a href="#" class="campus-life__link">
+                        <span class="campus-life__link-text">
+                           Learn More
+                        </span>
+                        <span class="campus-life__link-icon">
+                           <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                     </a>
+                  </div>
+               </article>
+               <!-- Card 4 -->
+               <article class="campus-life__card">
+                  <div class="campus-life__image-wrapper">
+                     <img src="./img/campus-life/campus-life-4.jpg" alt="Students attending campus cultural events"
+                        class="campus-life__image">
+                  </div>
 
-                            <a href="#" class="campus-life__link">
-                                <span class="campus-life__link-text">
-                                    Learn More
-                                </span>
-                                <span class="campus-life__link-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
+                  <div class="campus-life__card-content">
+                     <div class="campus-life__card-header">
+                        <div class="campus-life__icon">
+                           <i class="fa-solid fa-calendar-days"></i>
                         </div>
-                    </article>
-                    <!-- Card 4 -->
-                    <article class="campus-life__card">
-                        <div class="campus-life__image-wrapper">
-                            <img src="./img/campus-life/campus-life-4.jpg"
-                                alt="Students attending campus cultural events" class="campus-life__image">
+
+                        <h3 class="campus-life__card-title">
+                           Campus Events
+                        </h3>
+                     </div>
+
+                     <p class="campus-life__card-description">
+                        Celebrate campus life through cultural festivals, guest lectures, workshops, and
+                        memorable student events.
+                     </p>
+
+                     <a href="#" class="campus-life__link">
+                        <span class="campus-life__link-text">
+                           Learn More
+                        </span>
+                        <span class="campus-life__link-icon">
+                           <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                     </a>
+                  </div>
+               </article>
+            </div>
+
+         </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- Placement & Career Support -->
+      <section class="placement-support">
+         <div class="container">
+
+            <!-- Overview -->
+            <div class="placement-support__overview">
+               <div class="placement-support__content">
+
+                  <div class="placement-support__topbar">
+                     <div class="placement-support__label-group">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span class="placement-support__label">
+                           Placement & Career Support
+                        </span>
+                     </div>
+
+                     <a href="#" class="placement-support__link">
+                        <span>Explore Career Opportunities</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                     </a>
+                  </div>
+
+                  <h2 class="placement-support__title">
+                     Your Career, Our Priority
+                  </h2>
+
+                  <p class="placement-support__description">
+                     Dedicated guidance, industry connections, and career-focused support to help students
+                     achieve their professional goals and confidently enter the workforce.
+                  </p>
+
+                  <!-- Stats -->
+                  <div class="placement-support__stats">
+
+                     <article class="placement-support__stat-card">
+                        <div class="placement-support__stat-icon">
+                           <i class="fa-solid fa-bullseye"></i>
                         </div>
+                        <span class="placement-support__stat-value">
+                           95%
+                        </span>
+                        <span class="placement-support__stat-label">
+                           Placement Rate
+                        </span>
+                     </article>
 
-                        <div class="campus-life__card-content">
-                            <div class="campus-life__card-header">
-                                <div class="campus-life__icon">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                </div>
-
-                                <h3 class="campus-life__card-title">
-                                    Campus Events
-                                </h3>
-                            </div>
-
-                            <p class="campus-life__card-description">
-                                Celebrate campus life through cultural festivals, guest lectures, workshops, and
-                                memorable student events.
-                            </p>
-
-                            <a href="#" class="campus-life__link">
-                                <span class="campus-life__link-text">
-                                    Learn More
-                                </span>
-                                <span class="campus-life__link-icon">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
-                            </a>
+                     <article class="placement-support__stat-card">
+                        <div class="placement-support__stat-icon">
+                           <i class="fa-solid fa-building"></i>
                         </div>
-                    </article>
-                </div>
+                        <span class="placement-support__stat-value">
+                           150+
+                        </span>
+                        <span class="placement-support__stat-label">
+                           Recruiting Partners
+                        </span>
+                     </article>
+
+                     <article class="placement-support__stat-card">
+                        <div class="placement-support__stat-icon">
+                           <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <span class="placement-support__stat-value">
+                           1000+
+                        </span>
+                        <span class="placement-support__stat-label">
+                           Successful Alumni
+                        </span>
+                     </article>
+
+                     <article class="placement-support__stat-card">
+                        <div class="placement-support__stat-icon">
+                           <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <span class="placement-support__stat-value">
+                           24/7
+                        </span>
+                        <span class="placement-support__stat-label">
+                           Career Support
+                        </span>
+                     </article>
+
+                  </div>
+
+               </div>
+
+               <div class="placement-support__media">
+                  <img src="./img/placement-support/placement-support.webp"
+                     alt="Students receiving career guidance and placement support" class="placement-support__image">
+               </div>
 
             </div>
-        </section>
 
-        <!-- Placements -->
-        <section class="career-support"></section>
+            <!-- Features -->
+            <div class="placement-support__features">
+               <div class="placement-support__slider swiper">
+                  <div class="swiper-wrapper">
 
-    </main>
+                     <div class="swiper-slide">
+                        <a href="#" class="placement-support__feature-card">
+                           <div class="placement-support__feature-icon">
+                              <i class="fa-solid fa-briefcase"></i>
+                           </div>
+                           <h3 class="placement-support__feature-title">
+                              Internship Support
+                           </h3>
+                           <ul class="placement-support__feature-list">
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Industry internship opportunities</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Partner company programs</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Hands-on work experience</span>
+                              </li>
+                           </ul>
+                        </a>
+                     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+                     <div class="swiper-slide">
+                        <a href="#" class="placement-support__feature-card">
+                           <div class="placement-support__feature-icon">
+                              <i class="fa-solid fa-compass"></i>
+                           </div>
+                           <h3 class="placement-support__feature-title">
+                              Career Guidance
+                           </h3>
+                           <ul class="placement-support__feature-list">
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>One-on-one mentoring sessions</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Career planning assistance</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Professional development support</span>
+                              </li>
+                           </ul>
+                        </a>
+                     </div>
 
-    </footer>
+                     <div class="swiper-slide">
+                        <a href="#" class="placement-support__feature-card">
+                           <div class="placement-support__feature-icon">
+                              <i class="fa-solid fa-chalkboard-user"></i>
+                           </div>
+                           <h3 class="placement-support__feature-title">
+                              Industry Workshops
+                           </h3>
+                           <ul class="placement-support__feature-list">
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Expert-led training sessions</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Industry-relevant skill building</span>
+                              </li>
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Networking opportunities</span>
+                              </li>
+                           </ul>
+                        </a>
+                     </div>
+
+                     <div class="swiper-slide">
+                        <a href="#" class="placement-support__feature-card">
+                           <div class="placement-support__feature-icon">
+                              <i class="fa-solid fa-handshake"></i>
+                           </div>
+                           <h3 class="placement-support__feature-title">
+                              Campus Placements
+                           </h3>
+                           <ul class="placement-support__feature-list">
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Top recruiter partnerships</span>
+                              </li>
+
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Placement preparation programs</span>
+                              </li>
+
+                              <li>
+                                 <i class="fa-solid fa-circle-check"></i>
+                                 <span>Dedicated hiring support</span>
+                              </li>
+                           </ul>
+                        </a>
+                     </div>
+
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+
+               </div>
+
+            </div>
+
+            <!-- CTA -->
+            <div class="placement-support__cta">
+
+               <div class="placement-support__cta-content">
+                  <div class="placement-support__cta-icon">
+                     <i class="fa-solid fa-trophy"></i>
+                  </div>
+
+                  <div class="placement-support__cta-body">
+                     <h3 class="placement-support__cta-title">
+                        Building Futures Since Day One
+                     </h3>
+                     <p class="placement-support__cta-text">
+                        Our strong industry network and continuous training programs ensure students are
+                        job-ready and future-ready.
+                     </p>
+                  </div>
+               </div>
+
+               <div class="placement-support__cta-actions">
+                  <a href="#" class="placement-support__cta-button placement-support__cta-button--primary">
+                     <i class="fa-solid fa-building"></i>
+                     <span>View Placement Partners</span>
+                  </a>
+                  <a href="#" class="placement-support__cta-button placement-support__cta-button--secondary">
+                     <i class="fa-solid fa-comments"></i>
+                     <span>Talk to an Advisor</span>
+                  </a>
+               </div>
+
+            </div>
+
+         </div>
+      </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+   </main>
+
+   <!-- Footer -->
+   <footer class="footer">
+
+   </footer>
+
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="./js/main.js"></script>
 </body>
 
 </html>
