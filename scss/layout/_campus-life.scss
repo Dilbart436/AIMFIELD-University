@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-// ====== Campus Life Mobile ======
+// ====== Mobile Campus Life Mobile ======
 .campus-life {
     padding: $section-spacing-mobile 0;
 
@@ -15,7 +15,7 @@
     }
 
     .campus-life__title {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.2;
         color: $color-text-primary;
@@ -85,7 +85,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.25rem;
         padding: 0.5rem $card-padding 1rem;
     }
 
@@ -96,8 +96,8 @@
     }
 
     .campus-life__icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.25rem;
+        height: 2.25rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -106,20 +106,20 @@
     }
 
     .campus-life__icon i {
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: $color-accent;
     }
 
     .campus-life__card-title {
         font-size: 1.125rem;
         font-weight: 700;
-        line-height: 1.3;
+        line-height: 1;
         color: $color-text-primary;
     }
 
     .campus-life__card-description {
         font-size: 0.95rem;
-        line-height: 1.7;
+        line-height: 1.4;
         color: $color-text-secondary;
     }
 

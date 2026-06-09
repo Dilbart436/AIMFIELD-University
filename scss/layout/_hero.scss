@@ -165,7 +165,7 @@
         display: flex;
         justify-content: center;
         gap: 0.5rem;
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
 
     .swiper-pagination-bullet {
@@ -182,9 +182,7 @@
 
 
 // ====== Tablet Hero ======
-@media (min-width: $breakpoint-tablet) {
-
-}
+@media (min-width: $breakpoint-tablet) {}
 
 // ====== Desktop Hero ====== 
 @media (min-width: $breakpoint-desktop) {
