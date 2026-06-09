@@ -2,7 +2,7 @@
 
 // Hero Styling
 .hero {
-    padding: 3rem 0 4rem;
+    padding: $section-spacing-mobile 0;
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg,
@@ -44,7 +44,7 @@
     }
 
     .hero__title {
-        font-size: 2.35rem;
+        font-size: 2.15rem;
         font-weight: 700;
         line-height: 1.15;
         color: $color-text-primary;
@@ -59,7 +59,8 @@
 
     .hero__actions {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
         gap: 0.75rem;
     }
 
@@ -68,11 +69,11 @@
         align-items: center;
         justify-content: center;
         gap: 0.75rem;
-        flex: 1;
-        min-height: 4rem;
-        padding: 0.9rem 1.5rem;
+        min-height: 3.5rem;
+        padding: 0.75rem 1.25rem;
         border-radius: 0.75rem;
         font-weight: 600;
+        white-space: nowrap;
         transition: 0.3s ease;
     }
 
@@ -180,11 +181,16 @@
 }
 
 
-// Tablet & Desktop
-@media (min-width: 768px) {
+// ====== Tablet Hero ======
+@media (min-width: $breakpoint-tablet) {
+
+}
+
+// ====== Desktop Hero ====== 
+@media (min-width: $breakpoint-desktop) {
 
     .hero {
-        padding: 5rem 0;
+        padding: $section-spacing-desktop 0;
 
         .container {
             flex-direction: row;
@@ -206,6 +212,7 @@
 
         .hero__actions {
             flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
         }
 
