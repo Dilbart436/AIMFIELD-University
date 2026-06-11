@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Campus Life Mobile ======
+// ====== Mobile Campus Life ======
 .campus-life {
     padding: $section-spacing-mobile 0;
 
@@ -150,6 +150,8 @@
 @media (min-width: $breakpoint-tablet) {
     .campus-life {
 
+        padding: $section-spacing-tablet 0;
+
         .campus-life__header {
             flex-direction: row;
             justify-content: space-between;
@@ -171,6 +173,14 @@
         .campus-life__card:hover {
             transform: translateY(-2px);
             box-shadow: $shadow-lg;
+        }
+
+        .campus-life__image-wrapper {
+            height: 12rem;
+        }
+
+        .campus-life__card-description {
+            line-height: 1.6;
         }
     }
 }

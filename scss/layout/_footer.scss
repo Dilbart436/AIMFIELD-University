@@ -335,7 +335,7 @@
     .footer {
 
         .footer__main {
-            grid-template-columns: 1.5fr 1fr 1fr;
+            grid-template-columns: 1.25fr 1fr 1fr;
         }
 
         .footer__brand {
@@ -349,6 +349,7 @@
 
         .footer__programs {
             grid-column: 3;
+            margin-left: -1.25rem;
         }
 
         .footer__contact {

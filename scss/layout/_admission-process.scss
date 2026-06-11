@@ -173,16 +173,10 @@
         align-items: center;
         gap: 0.5rem;
         font-weight: 600;
-    }
-
-    .admission-process__cta-button {
         padding: 0.875rem 1.25rem;
         border-radius: $radius-md;
         background-color: $color-accent;
         color: $color-surface;
-    }
-
-    .admission-process__cta-button {
         transition: transform 0.3s ease,
             box-shadow 0.3s ease,
             background-color 0.3s ease;
@@ -195,8 +189,86 @@
 }
 
 
-// ====== Admission Process Desktop & Tablet Layout ======
-@media (min-width: 768px) {
+
+// ====== Tablet Admission Process ======
+@media (min-width: $breakpoint-tablet) {
+
+    .admission-process {
+
+        .admission-process__steps {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 1rem;
+            column-gap: 0.75rem;
+        }
+
+        .admission-process__step::after {
+            display: none;
+        }
+
+        .admission-process__step {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem;
+            padding: 1.5rem;
+            border-radius: $radius-lg;
+            background-color: $color-surface;
+            box-shadow: $shadow-md;
+        }
+
+        .admission-process__step-number {
+            position: absolute;
+            top: -0.75rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-right: 0;
+        }
+
+        .admission-process__step-icon {
+            margin-left: 0.75rem;
+        }
+
+        .admission-process__step-icon i {
+            font-size: 2rem;
+        }
+
+        .admission-process__step-content {
+            flex: 1;
+            align-items: center;
+            gap: 0.25rem;
+            height: 100%;
+        }
+
+        .admission-process__step-link {
+            margin-top: auto;
+        }
+
+        .admission-process__cta {
+            margin-top: 2rem;
+        }
+
+        .admission-process__cta-button {
+            padding: 1rem 1.75rem;
+        }
+    }
+}
+
+@media (min-width: 912px) {
+
+    .admission-process {
+
+        .admission-process__header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+}
+
+// ====== Desktop Admission Process ======
+@media (min-width: $breakpoint-desktop) {
 
     .admission-process {
 

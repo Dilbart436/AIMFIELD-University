@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Placemen-Support ======
+// ====== Mobile Placement & Career Support ======
 .placement-support {
     padding: $section-spacing-mobile 0;
     background-color: $color-placement-background;
@@ -111,6 +111,9 @@
     .placement-support__media {
         overflow: hidden;
         border-radius: $radius-lg;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18),
+            -16px 0 32px rgba(15, 23, 42, 0.12);
+
     }
 
     .placement-support__image {
@@ -284,16 +287,22 @@
 }
 
 
-// ====== Tablet ======
-@media (min-width: 768px) {
+// ====== Tablet Placement & Career Support ======
+@media (min-width: $breakpoint-tablet) {
 
     .placement-support {
+
+        padding: $section-spacing-tablet 0;
 
         .placement-support__overview {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             align-items: center;
+        }
+
+        .placement-support__media {
+            height: 100%;
         }
 
         .placement-support__cta-actions {
@@ -334,8 +343,8 @@
 }
 
 
-// ====== Desktop ======
-@media (min-width: 1024px) {
+// ====== Desktop Placement & Career Support ======
+@media (min-width: $breakpoint-desktop) {
 
     .placement-support {
 

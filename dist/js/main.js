@@ -74,7 +74,7 @@ const placementSlider = new Swiper(".placement-support__slider", {
 
     breakpoints: {
         768: {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
         },
 
         1024: {
