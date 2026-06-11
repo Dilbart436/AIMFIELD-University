@@ -31,8 +31,7 @@
     .hero__content {
         display: flex;
         flex-direction: column;
-        gap: 1.25rem;
-        max-width: 34rem;
+        gap: 1rem;
     }
 
     .hero__eyebrow {
@@ -44,7 +43,7 @@
     }
 
     .hero__title {
-        font-size: 2.15rem;
+        font-size: 2rem;
         font-weight: 700;
         line-height: 1.15;
         color: $color-text-primary;
@@ -54,7 +53,6 @@
         font-size: 1rem;
         line-height: 1.7;
         color: $color-text-secondary;
-        max-width: 32ch;
     }
 
     .hero__actions {
@@ -182,7 +180,40 @@
 
 
 // ====== Tablet Hero ======
-@media (min-width: $breakpoint-tablet) {}
+@media (min-width: $breakpoint-tablet) {
+    .hero {
+        padding: $section-spacing-tablet 0;
+
+        .container {
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hero__content,
+        .hero__media {
+            flex: 1;
+            min-width: 0;
+        }
+
+
+        .hero__actions {
+            flex-direction: row;
+            gap: 0.75rem;
+        }
+
+        .hero__button {
+            flex: 1;
+            white-space: normal;
+            padding: 0rem 1rem;
+        }
+
+        .hero__pagination {
+            margin-top: 1.25rem;
+        }
+    }
+}
+
 
 // ====== Desktop Hero ====== 
 @media (min-width: $breakpoint-desktop) {
@@ -191,8 +222,6 @@
         padding: $section-spacing-desktop 0;
 
         .container {
-            flex-direction: row;
-            align-items: center;
             gap: 3rem;
         }
 

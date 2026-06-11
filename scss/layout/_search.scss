@@ -1,6 +1,6 @@
 @use "../abstracts/variables" as *;
 
-// ====== Search Styling ======
+// ====== Mobile Search ======
 .search {
     position: relative;
     margin-top: -0.5rem;
@@ -134,8 +134,24 @@
 }
 
 
-// ====== Tablet & Desktop =======
-@media (min-width: 768px) {
+// ====== Tablet Search =======
+@media (min-width: $breakpoint-tablet) {
+
+    .search {
+
+        .search__categories {
+            justify-content: center;
+        }
+
+        .search__button i {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+
+// ====== Desktop Search =======
+@media (min-width: $breakpoint-desktop) {
 
     .search {
         padding: $section-spacing-desktop 0;
