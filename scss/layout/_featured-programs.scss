@@ -118,6 +118,8 @@
     }
 
     .program-card {
+        background-color: $color-surface;
+        border-top: 4px solid $color-accent;
         transition:
             transform 0.3s ease,
             box-shadow 0.3s ease;
@@ -177,6 +179,7 @@
 
 }
 
+// ====== Magic breakpoint fix, only for this below ======
 @media (min-width: 1053px) {
 
     .featured-programs {

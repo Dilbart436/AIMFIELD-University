@@ -80,5 +80,9 @@ const placementSlider = new Swiper(".placement-support__slider", {
         1024: {
             slidesPerView: 2.5,
         },
+
+        1280: {
+            slidesPerView: 3.2,
+        },
     },
 });

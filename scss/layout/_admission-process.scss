@@ -212,6 +212,7 @@
             align-items: center;
             text-align: center;
             gap: 0.5rem;
+            margin-top: 0.5rem;
             padding: 1.5rem;
             border-radius: $radius-lg;
             background-color: $color-surface;
@@ -227,6 +228,7 @@
         }
 
         .admission-process__step-icon {
+            margin-top: 0.5rem;
             margin-left: 0.75rem;
         }
 
@@ -273,8 +275,8 @@
     .admission-process {
 
         .admission-process__steps {
-            display: grid;
             grid-template-columns: repeat(4, 1fr);
+            margin-top: 2.5rem;
         }
 
         .admission-process__step {
@@ -282,7 +284,7 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding: 3rem 1.5rem 1.5rem;
+            padding: 1.5rem;
             border-radius: $radius-lg;
             background-color: $color-surface;
             box-shadow: $shadow-md;
@@ -290,7 +292,7 @@
 
         .admission-process__step-number {
             position: absolute;
-            top: -1.25rem;
+            top: -1rem;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -303,21 +305,33 @@
             align-items: center;
             flex: initial;
             height: 100%;
+            gap: 0.5rem;
         }
 
         .admission-process__step-icon {
-            width: 3.5rem;
             box-shadow: $shadow-md;
+        }
+
+        .admission-process__step-icon i {
+            font-size: 1.5rem;
+        }
+
+        .admission-process__step-title {
+            font-size: 1rem;
+        }
+
+        .admission-process__step-description {
+            font-size: 0.875rem;
+            text-wrap: balance;
         }
 
         .admission-process__step-link {
             margin-top: auto;
         }
 
-        .admission-process__header {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
+        .admission-process__cta {
+            margin-top: 1.5rem;
         }
+
     }
 }
