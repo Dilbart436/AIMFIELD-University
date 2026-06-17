@@ -86,7 +86,7 @@
         right: 1rem;
         width: auto;
         z-index: 1000;
-        padding: 1.25rem;
+        padding: 1rem;
         background-color: $color-surface;
         border-top: 1px solid rgba(148, 163, 184, 0.12);
         box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
@@ -114,9 +114,45 @@
         width: 100%;
     }
 
-    .mega-menu {
-        // display: none;
+    // Mega menu active-state styles.
+    // Applied when JavaScript adds .nav__item--mega-active.
+    .nav__item--mega-active .mega-menu {
+        display: block;
+    }
 
+    .nav__item--mega-active .nav__trigger {
+        color: $color-accent;
+    }
+
+    .nav__item--mega-active .nav__trigger-icon {
+        transform: rotate(180deg);
+        transition: transform 0.25s ease;
+    }
+
+    .nav__link,
+    .nav__trigger {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: $color-text-primary;
+        font-weight: 500;
+        border-radius: 0.75rem;
+        transition:
+            color 0.3s ease;
+
+    }
+
+    .nav__trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: none;
+        background-color: transparent;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    .mega-menu {
+        display: none;
         padding: 1rem;
         background-color: rgba(37, 99, 235, 0.04);
         border-radius: 0.75rem;
@@ -128,10 +164,6 @@
 
     .mega-menu__item:not(:last-child) {
         border-bottom: 1px solid rgba(148, 163, 184, 0.24);
-    }
-
-    .mega-menu--active {
-        display: block;
     }
 
     .mega-menu__heading {
@@ -164,40 +196,6 @@
 
     .mega-menu__featured {
         display: none;
-    }
-
-    .nav__link,
-    .nav__trigger {
-        display: block;
-        padding: 0.875rem 1rem;
-        color: $color-text-primary;
-        font-weight: 500;
-        border-radius: 0.75rem;
-        transition:
-            color 0.3s ease;
-
-    }
-
-    .nav__trigger {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        border: none;
-        background-color: transparent;
-        font: inherit;
-        cursor: pointer;
-    }
-
-    .nav__trigger--active {
-        color: $color-accent;
-    }
-
-    .nav__trigger--active .nav__trigger-icon {
-        transform: rotate(180deg);
-    }
-
-    .nav__trigger-icon {
-        transition: transform 0.25s ease;
     }
 
     .nav__link:hover {
@@ -279,6 +277,16 @@
         .nav__brand-subtitle {
             font-size: 0.6rem;
             letter-spacing: 0.18rem;
+        }
+
+        .mega-menu__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.125rem 2rem;
+        }
+
+        .mega-menu__item:not(:last-child) {
+            border-bottom: none;
         }
     }
 

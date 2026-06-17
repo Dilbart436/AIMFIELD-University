@@ -5,7 +5,9 @@ import "../scss/main.scss";
 import { initNavigation } from "./components/navigation.js";
 import { initHeroSlider } from "./components/hero-slider.js";
 import { initPlacementSlider } from "./components/placement-slider.js";
+import { initMegaMenu } from "./components/mega-menu.js";
 
 initNavigation();
 initHeroSlider();
 initPlacementSlider();
+initMegaMenu();
