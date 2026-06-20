@@ -25,11 +25,6 @@
 
          <nav class="nav" aria-label="Primary navigation">
 
-            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
-               aria-controls="primary-navigation">
-               <i class="fa-solid fa-bars nav__toggle-icon" aria-hidden="true"></i>
-            </button>
-
             <a class="nav__brand" href="/">
                <i class="fa-solid fa-graduation-cap nav__logo" aria-hidden="true"></i>
                <span class="nav__brand-text">
@@ -41,6 +36,11 @@
                   </span>
                </span>
             </a>
+
+            <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false"
+               aria-controls="primary-navigation">
+               <i class="fa-solid fa-bars nav__toggle-icon" aria-hidden="true"></i>
+            </button>
 
             <!-- Links Container -->
             <ul class="nav__links" id="primary-navigation">
@@ -141,7 +141,7 @@
                <li class="nav__item nav__item--mega">
                   <button class="nav__trigger" type="button" aria-expanded="false" aria-haspopup="true"
                      aria-controls="campus-life-menu">
-                     <span>Campus Life</span>
+                     <span>Campus</span>
                      <i class="fa-solid fa-chevron-down nav__trigger-icon" aria-hidden="true">
                      </i>
                   </button>
@@ -399,6 +399,12 @@
                   <a class="nav__link" href="#contact">Contact</a>
                </li>
 
+               <li class="nav__item nav__item--auth">
+                  <a class="nav__mobile-cta" href="#auth">
+                     <i class="fa-regular fa-user" aria-hidden="true"></i>
+                     <span>Login/Signup</span>
+                  </a>
+               </li>
             </ul>
 
             <div class="nav__actions">
