@@ -7,6 +7,17 @@ export function initMegaMenu() {
         return;
     }
 
+    const isDesktop = window.matchMedia("(min-width: 1024px)");
+
+    let closeTimer = null;
+
+    const nav = document.querySelector(".nav");
+    const standardNavItems = document.querySelectorAll(".nav__item:not(.nav__item--mega)");
+
+    if (!nav) {
+        return;
+    }
+
     megaMenuItems.forEach((megaMenuItem) => {
         const trigger = megaMenuItem.querySelector(".nav__trigger");
         const megaMenu = megaMenuItem.querySelector(".mega-menu");
@@ -26,6 +37,36 @@ export function initMegaMenu() {
             openMegaMenu(megaMenuItem);
 
         });
+
+        megaMenuItem.addEventListener("mouseenter", () => {
+            if (!isDesktop.matches) {
+                return;
+            }
+
+            clearTimeout(closeTimer);
+            openMegaMenu(megaMenuItem);
+        });
+    });
+
+    standardNavItems.forEach((navItem) => {
+        navItem.addEventListener("mouseenter", () => {
+            if (!isDesktop.matches) {
+                return;
+            }
+
+            clearTimeout(closeTimer);
+            closeActiveMegaMenu();
+        });
+    });
+
+    nav.addEventListener("mouseleave", () => {
+        if (!isDesktop.matches) {
+            return;
+        }
+
+        closeTimer = setTimeout(() => {
+            closeActiveMegaMenu();
+        }, 200);
     });
 
     document.addEventListener("click", (event) => {
