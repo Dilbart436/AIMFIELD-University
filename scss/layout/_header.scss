@@ -439,7 +439,7 @@
 
         .mega-menu {
             position: absolute;
-            top: calc(100% - 1px);
+            top: 100%;
             width: min(100%, 65rem);
             left: 50%;
             transform: translateX(-50%);
@@ -459,14 +459,14 @@
             flex: 3;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
         .mega-menu__featured {
             flex: 2;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 1.5rem;
             background-color: rgba(21, 94, 117, 0.04);
             border: 1px solid rgba(21, 94, 117, 0.12);
@@ -516,34 +516,9 @@
             white-space: nowrap;
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // This two blocks of code are important
         .nav__item--mega-active .nav__trigger {
-            border-radius: 0.75rem 0.75rem 0 0;
-            background-color: lightblue;
-            // background-color: $color-surface;
-        }
-
-        .mega-menu {
-            // background-color: $color-surface;
-            background-color: lightblue;
-            top: calc(100% - 1.5rem);
+            background-color: $color-surface;
         }
 
     }
-
-
 }

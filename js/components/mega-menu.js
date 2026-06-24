@@ -1,4 +1,6 @@
+// ====== Mega Menu Initialization ======
 export function initMegaMenu() {
+    // Departments, Campus, Admissions and News
     const megaMenuItems = document.querySelectorAll(".nav__item--mega");
 
     if (!megaMenuItems.length) {
@@ -15,20 +17,15 @@ export function initMegaMenu() {
 
         trigger.addEventListener("click", () => {
             const isExpanded = megaMenuItem.classList.contains("nav__item--mega-active");
-            const activeMegaMenuItem = document.querySelector(".nav__item--mega-active");
 
-            if (activeMegaMenuItem && activeMegaMenuItem !== megaMenuItem) {
-                activeMegaMenuItem.classList.remove("nav__item--mega-active");
-
-                activeMegaMenuItem
-                    .querySelector(".nav__trigger")
-                    .setAttribute("aria-expanded", "false");
+            if (isExpanded) {
+                closeMegaMenu(megaMenuItem);
+                return;
             }
 
-            trigger.setAttribute("aria-expanded", !isExpanded);
-            megaMenuItem.classList.toggle("nav__item--mega-active");
-        });
+            openMegaMenu(megaMenuItem);
 
+        });
     });
 
     document.addEventListener("click", (event) => {
@@ -38,16 +35,7 @@ export function initMegaMenu() {
             return;
         }
 
-        const activeMegaMenuItem = document.querySelector(".nav__item--mega-active");
-
-        if (!activeMegaMenuItem) {
-            return;
-        }
-
-        activeMegaMenuItem.classList.remove("nav__item--mega-active");
-        activeMegaMenuItem
-            .querySelector(".nav__trigger")
-            .setAttribute("aria-expanded", "false");
+        closeActiveMegaMenu();
     });
 
     document.addEventListener("keydown", (event) => {
@@ -55,16 +43,56 @@ export function initMegaMenu() {
             return;
         }
 
-        const activeMegaMenuItem = document.querySelector(".nav__item--mega-active");
-
-        if (!activeMegaMenuItem) {
-            return;
-        }
-
-        activeMegaMenuItem.classList.remove("nav__item--mega-active");
-
-        activeMegaMenuItem
-            .querySelector(".nav__trigger")
-            .setAttribute("aria-expanded", "false");
+        closeActiveMegaMenu();
     });
+}
+
+
+// ====== Helper Functions ======
+function openMegaMenu(megaMenuItem) {
+    if (!megaMenuItem) {
+        return;
+    }
+
+    // Ensure only one mega menu is open at a time
+    closeActiveMegaMenu();
+
+    megaMenuItem.classList.add("nav__item--mega-active");
+
+    const trigger = megaMenuItem.querySelector(".nav__trigger");
+
+    if (!trigger) {
+        return;
+    }
+
+    trigger.setAttribute("aria-expanded", "true");
+}
+
+
+function closeMegaMenu(megaMenuItem) {
+    if (!megaMenuItem) {
+        return;
+    }
+
+    megaMenuItem.classList.remove("nav__item--mega-active");
+
+    const trigger = megaMenuItem.querySelector(".nav__trigger");
+
+    if (!trigger) {
+        return;
+    }
+
+    trigger.setAttribute("aria-expanded", "false");
+}
+
+
+// Find and close the currently active mega menu
+function closeActiveMegaMenu() {
+    const activeMegaMenuItem = document.querySelector(".nav__item--mega-active");
+
+    if (!activeMegaMenuItem) {
+        return;
+    }
+
+    closeMegaMenu(activeMegaMenuItem);
 }
