@@ -114,21 +114,6 @@
         width: 100%;
     }
 
-    // Mega menu active-state styles.
-    // Applied when JavaScript adds .nav__item--mega-active.
-    .nav__item--mega-active .mega-menu {
-        display: block;
-    }
-
-    .nav__item--mega-active .nav__trigger {
-        color: $color-accent;
-    }
-
-    .nav__item--mega-active .nav__trigger-icon {
-        transform: rotate(180deg);
-        transition: transform 0.25s ease;
-    }
-
     .nav__link,
     .nav__trigger {
         display: block;
@@ -151,6 +136,13 @@
         cursor: pointer;
     }
 
+    .nav__link:focus-visible,
+    .nav__trigger:focus-visible {
+        outline: none;
+        background-color: rgba(21, 94, 117, 0.06);
+        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
+    }
+
     .mega-menu {
         display: none;
         padding: 1rem;
@@ -160,6 +152,24 @@
         box-shadow:
             0 8px 16px rgba(15, 23, 42, 0.08),
             0 2px 4px rgba(15, 23, 42, 0.04);
+    }
+
+    // Mega menu active-state styles.
+    // Applied when JavaScript adds .nav__item--mega-active.
+    .nav__item--mega-active .mega-menu {
+        display: block;
+    }
+
+    .nav__item--mega-active .nav__trigger {
+        color: $color-accent;
+    }
+
+    .nav__trigger-icon {
+        transition: transform 0.3s ease-out;
+    }
+
+    .nav__item--mega-active .nav__trigger-icon {
+        transform: rotate(180deg);
     }
 
     .mega-menu__item:not(:last-child) {
@@ -181,36 +191,69 @@
 
     .mega-menu__link {
         display: block;
-        padding: 0.25rem 0;
+        padding: 0.25rem;
         color: $color-text-primary;
+        transition: color 0.3s ease;
+    }
+
+    .mega-menu__link:hover {
+        color: $color-accent;
     }
 
     .mega-menu__cta {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
+        padding: 0.25rem;
         margin-top: 0.5rem;
         color: $color-accent;
         font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    .mega-menu__cta:hover {
+        color: $color-accent-hover;
+    }
+
+    .mega-menu__cta-icon {
+        transition: transform 0.3s ease-out;
+    }
+
+    .mega-menu__cta:hover .mega-menu__cta-icon {
+        transform: translateX(0.25rem);
     }
 
     .mega-menu__featured {
         display: none;
     }
 
-    .nav__link:hover {
-        background-color: rgba(37, 99, 235, 0.06);
+    .mega-menu__action:hover {
+        color: $color-accent-hover;
     }
 
+    .mega-menu__action-icon {
+        transition: transform 0.3s ease-out;
+    }
+
+    .mega-menu__action:hover .mega-menu__action-icon {
+        transform: translateX(0.25rem);
+    }
+
+    .mega-menu__link:focus-visible,
+    .mega-menu__cta:focus-visible,
+    .mega-menu__action:focus-visible {
+        outline: none;
+        border-radius: 0.5rem;
+        background-color: rgba(21, 94, 117, 0.06);
+        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
+    }
+
+    // This below one line need inspection.
     .nav__link:active {
         background-color: rgba(37, 99, 235, 0.12);
     }
 
-    .nav__link:focus-visible {
-        outline: none;
-        background-color: rgba(21, 94, 117, 0.06);
-        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
-    }
+    // --------------------------------------------------
 
     .nav__actions {
         margin-left: auto;
@@ -334,6 +377,51 @@
             display: none;
         }
 
+        .nav {
+            position: relative;
+            gap: 0.5rem;
+        }
+
+        .nav__actions {
+            display: block;
+            flex-shrink: 0;
+            margin-left: 0;
+        }
+
+        .nav__brand {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: auto;
+        }
+
+        .nav__logo {
+            font-size: 2.5rem;
+        }
+
+        .nav__brand-text {
+            justify-content: center;
+            gap: 0.05rem;
+            font-size: 1.25rem;
+        }
+
+        .nav__brand-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.02rem;
+        }
+
+        .nav__brand-subtitle {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.28rem;
+        }
+
+        .nav__cta {
+            padding: 0.625rem 0.875rem;
+            border: 2px solid $color-accent;
+            font-size: 0.875rem;
+        }
+
         .nav__item--auth {
             display: none;
         }
@@ -388,66 +476,46 @@
             color: $color-accent;
         }
 
-        .nav {
-            position: relative;
-            gap: 0.5rem;
-        }
-
-        .nav__actions {
-            display: block;
-            flex-shrink: 0;
-            margin-left: 0;
-        }
-
-        .nav__brand {
-            flex-grow: 0;
-            flex-shrink: 0;
-            flex-basis: auto;
-        }
-
-        .nav__logo {
-            font-size: 2.5rem;
-        }
-
-        .nav__brand-text {
-            justify-content: center;
-            gap: 0.05rem;
-            font-size: 1.25rem;
-        }
-
-        .nav__brand-name {
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: 0.02rem;
-        }
-
-        .nav__brand-subtitle {
-            font-size: 0.62rem;
-            font-weight: 600;
-            letter-spacing: 0.28rem;
-        }
-
-        .nav__cta {
-            padding: 0.625rem 0.875rem;
-            border: 2px solid $color-accent;
-            font-size: 0.875rem;
-        }
-
         .nav__item {
             width: auto;
         }
 
+        .nav__trigger {
+            gap: 0.25rem;
+            padding: 0.5rem 0.625rem;
+            white-space: nowrap;
+        }
+
+        .nav__item--mega-active .nav__trigger {
+            background-color: $color-surface;
+        }
+
         .mega-menu {
+            display: block;
             position: absolute;
             top: 100%;
             width: min(100%, 65rem);
             left: 50%;
-            transform: translateX(-50%);
-            padding: 1.5rem;
+            transform: translate(-50%, 0.25rem);
+            padding: 1rem 1.5rem 1.5rem;
             background-color: $color-surface;
             border: 1px solid rgba(148, 163, 184, 0.12);
-            border-radius: 1rem;
+            border-top: none;
+            border-radius: 0 0 1rem 1rem;
             box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+
+            transition: opacity 0.3s ease-out,
+                transform 0.3s ease-out;
+        }
+
+        .nav__item--mega-active .mega-menu {
+            opacity: 1;
+            pointer-events: auto;
+            visibility: visible;
+            transform: translate(-50%, 0);
         }
 
         .mega-menu__inner {
@@ -467,7 +535,7 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
-            padding: 1.5rem;
+            padding: 1.25rem 1.5rem 1.5rem;
             background-color: rgba(21, 94, 117, 0.04);
             border: 1px solid rgba(21, 94, 117, 0.12);
             border-radius: 1rem;
@@ -501,23 +569,15 @@
             align-items: center;
             gap: 0.5rem;
             align-self: flex-start;
+            padding: 0.25rem;
             color: $color-accent;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         .mega-menu__list {
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
-        }
-
-        .nav__trigger {
-            gap: 0.25rem;
-            padding: 0.5rem 0.625rem;
-            white-space: nowrap;
-        }
-
-        .nav__item--mega-active .nav__trigger {
-            background-color: $color-surface;
         }
 
     }
