@@ -86,6 +86,14 @@ export function initMegaMenu() {
 
         closeActiveMegaMenu();
     });
+
+    isDesktop.addEventListener("change", (event) => {
+        if (event.matches) {
+            return;
+        }
+
+        closeActiveMegaMenu();
+    });
 }
 
 
