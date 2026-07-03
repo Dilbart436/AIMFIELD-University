@@ -1,0 +1,371 @@
+@use "../abstracts/variables" as *;
+
+.auth-modal {
+    position: fixed;
+    inset: 0;
+    z-index: $z-modal;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+}
+
+.auth-modal__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(15, 23, 42, 0.65);
+}
+
+.auth-modal__dialog {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 30rem;
+    margin-top: 3.5rem;
+    background-color: $color-surface;
+    border-radius: $radius-md;
+    box-shadow: $shadow-lg;
+}
+
+.auth-modal__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 2rem 1rem;
+}
+
+.auth-modal__close {
+    position: absolute;
+    top: 1.325rem;
+    right: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 0.25rem;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.auth-modal__close:hover {
+    background-color: rgba(15, 23, 42, 0.06);
+    color: $color-text-primary;
+    transform: rotate(90deg);
+}
+
+.auth-modal__close:active {
+    transform: rotate(0deg);
+}
+
+.auth-modal__close:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+}
+
+.auth-modal__close i {
+    font-size: 1.125rem;
+    color: $color-text-secondary;
+}
+
+.auth-modal__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $color-text-primary;
+    text-align: center;
+}
+
+.auth-modal__description {
+    color: $color-text-secondary;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.auth-modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0 2rem 1.5rem;
+}
+
+.auth-modal__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-modal__label {
+    font-weight: 600;
+    color: $color-text-primary;
+}
+
+.auth-modal__input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    border: 1px solid $color-border-strong;
+    border-radius: $radius-sm;
+    background-color: $color-surface;
+}
+
+.auth-modal__input {
+    flex: 1;
+    padding: 0.875rem 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: $color-text-primary;
+}
+
+.auth-modal__input-icon {
+    flex-shrink: 0;
+    font-size: 1rem;
+    color: $color-text-secondary;
+}
+
+.auth-modal__input::placeholder {
+    color: $color-text-secondary;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.auth-modal__input-wrapper:focus-within {
+    border-color: $color-accent;
+    box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.15);
+}
+
+.auth-modal__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 0.125rem;
+    background: transparent;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.auth-modal__toggle:hover {
+    transform: scale(1.1);
+}
+
+.auth-modal__toggle:hover i {
+    color: $color-accent;
+}
+
+.auth-modal__toggle:active {
+    transform: scale(1);
+}
+
+.auth-modal__toggle:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 2px;
+}
+
+.auth-modal__toggle i {
+    font-size: 1rem;
+    color: $color-text-secondary;
+}
+
+.auth-modal__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-modal__secondary-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-modal__forgot-password {
+    border-radius: 0.125rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $color-accent;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.auth-modal__forgot-password:hover {
+    color: $color-accent-hover;
+    transform: translateX(2px);
+}
+
+.auth-modal__forgot-password:active {
+    transform: translateX(0);
+}
+
+.auth-modal__forgot-password:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 4px;
+}
+
+.auth-modal__primary-actions {
+    display: flex;
+}
+
+.auth-modal__submit {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: $radius-sm;
+    background-color: $color-accent;
+    color: $color-surface;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-modal__submit:hover {
+    background-color: $color-accent-hover;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+}
+
+.auth-modal__submit:active {
+    transform: translateY(0);
+    box-shadow: $shadow-sm;
+}
+
+.auth-modal__submit:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+}
+
+.auth-modal__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 0 2rem 1.5rem;
+}
+
+.auth-modal__divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-modal__divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: $color-border-strong;
+}
+
+.auth-modal__divider-text {
+    color: $color-text-secondary;
+    font-size: 0.875rem;
+}
+
+.auth-modal__social {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-modal__social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    flex: 1;
+    padding: 0.875rem 1.5rem;
+    border: 1px solid $color-border-strong;
+    border-radius: $radius-sm;
+    background-color: rgba(21, 94, 117, 0.12);
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.auth-modal__social-button:hover {
+    background-color: rgba(21, 94, 117, 0.18);
+    border-color: $color-accent;
+    transform: translateY(-2px);
+    box-shadow: $shadow-sm;
+}
+
+.auth-modal__social-button:active {
+    background-color: rgba(21, 94, 117, 0.12);
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.auth-modal__social-button:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 3px;
+}
+
+.auth-modal__social-icon {
+    font-size: 1.125rem;
+}
+
+.auth-modal__social-icon--google {
+    color: #DB4437;
+}
+
+.auth-modal__social-icon--facebook {
+    color: #1877F2;
+}
+
+.auth-modal__social-text {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: $color-text-primary;
+}
+
+.auth-modal__switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.auth-modal__switch-text {
+    color: $color-text-secondary;
+}
+
+.auth-modal__mode-toggle {
+    border: none;
+    border-radius: 0.125rem;
+    background: transparent;
+    color: $color-accent;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.auth-modal__mode-toggle:hover {
+    color: $color-accent-hover;
+    transform: translateX(2px);
+}
+
+.auth-modal__mode-toggle:active {
+    transform: translateX(0);
+}
+
+.auth-modal__mode-toggle:focus-visible {
+    outline: 2px solid $color-accent;
+    outline-offset: 4px;
+}
