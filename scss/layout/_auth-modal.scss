@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as *;
 
+// ====== Mobile Auth Modal ======
 .auth-modal {
     position: fixed;
     inset: 0;
@@ -7,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 1rem;
+    padding: 4.5rem 1rem 1rem;
 }
 
 .auth-modal__overlay {
@@ -24,7 +25,6 @@
     flex-direction: column;
     width: 100%;
     max-width: 30rem;
-    margin-top: 3.5rem;
     background-color: $color-surface;
     border-radius: $radius-md;
     box-shadow: $shadow-lg;
@@ -39,15 +39,15 @@
 
 .auth-modal__close {
     position: absolute;
-    top: 1.325rem;
-    right: 0.75rem;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 2.5rem;
     aspect-ratio: 1;
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 25%;
     background: transparent;
     cursor: pointer;
     transition:
@@ -120,6 +120,7 @@
 
 .auth-modal__input {
     flex: 1;
+    min-width: 0;
     padding: 0.875rem 0;
     border: none;
     outline: none;
@@ -284,6 +285,7 @@
     justify-content: center;
     gap: 0.75rem;
     flex: 1;
+    min-width: 0;
     padding: 0.875rem 1.5rem;
     border: 1px solid $color-border-strong;
     border-radius: $radius-sm;
@@ -368,4 +370,66 @@
 .auth-modal__mode-toggle:focus-visible {
     outline: 2px solid $color-accent;
     outline-offset: 4px;
+}
+
+
+// ====== Mobile Landscape Auth Modal ======
+@media (max-height: 450px) and (orientation: landscape) {
+
+    .auth-modal {
+        padding: 2.5rem 1rem 1rem;
+    }
+
+    .auth-modal__dialog {
+        align-self: flex-start;
+        max-height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+}
+
+
+// ====== Tablet Auth Modal ======
+@media (min-width: $breakpoint-tablet) {
+
+    .auth-modal {
+        align-items: center;
+    }
+
+    .auth-modal__dialog {
+        transform: translateY(-2rem);
+    }
+
+    .auth-modal__header {
+        padding-top: 2rem;
+    }
+
+    .auth-modal__description {
+        line-height: 1.4;
+    }
+
+    .auth-modal__form {
+        padding-top: 0.5rem;
+    }
+
+    .auth-modal__footer {
+        padding: 0.5rem 2rem 2rem;
+    }
+
+    .auth-modal__divider-text {
+        font-size: 1rem;
+    }
+}
+
+
+// ====== Desktop Auth Modal ======
+@media (min-width: $breakpoint-desktop) {
+
+    .auth-modal {
+        padding-top: 1rem;
+    }
+
+    .auth-modal__dialog {
+        transform: translateY(1rem);
+    }
 }
