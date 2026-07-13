@@ -306,12 +306,9 @@
                <li class="nav__item nav__item--mega">
                   <button class="nav__trigger" type="button" aria-expanded="false" aria-haspopup="true"
                      aria-controls="news-menu">
-
                      <span>News</span>
-
                      <i class="fa-solid fa-chevron-down nav__trigger-icon" aria-hidden="true">
                      </i>
-
                   </button>
 
                   <div class="mega-menu" id="news-menu">
@@ -398,18 +395,18 @@
                </li>
 
                <li class="nav__item nav__item--auth">
-                  <a class="nav__mobile-cta" href="#auth">
+                  <button class="nav__mobile-cta js-auth-trigger" type="button">
                      <i class="fa-regular fa-user" aria-hidden="true"></i>
-                     <span>Login/Signup</span>
-                  </a>
+                     <span>Sign In / Sign Up</span>
+                  </button>
                </li>
             </ul>
 
             <div class="nav__actions">
-               <a class="nav__cta" href="#auth">
+               <button class="nav__cta js-auth-trigger" type="button">
                   <i class="fa-regular fa-user" aria-hidden="true"></i>
-                  <span>Login/Signup</span>
-               </a>
+                  <span>Sign In / Sign Up</span>
+               </button>
             </div>
 
          </nav>
@@ -1556,27 +1553,27 @@
 
 
    <!-- Authentication Modal -->
-   <div class="auth-modal">
-      <div class="auth-modal__overlay"></div>
+   <div class="auth-modal js-auth-modal">
+      <div class="auth-modal__overlay js-auth-overlay"></div>
 
       <div class="auth-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title"
          aria-describedby="auth-modal-description">
 
          <header class="auth-modal__header">
-            <button class="auth-modal__close" type="button" aria-label="Close authentication modal">
+            <button class="auth-modal__close js-auth-close" type="button" aria-label="Close authentication modal">
                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
 
-            <h2 class="auth-modal__title" id="auth-modal-title">
+            <h2 class="auth-modal__title js-auth-title" id="auth-modal-title">
                Welcome Back
             </h2>
 
-            <p class="auth-modal__description" id="auth-modal-description">
+            <p class="auth-modal__description js-auth-description" id="auth-modal-description">
                Sign in to continue your learning journey.
             </p>
          </header>
 
-         <form class="auth-modal__form">
+         <form class="auth-modal__form js-auth-form" novalidate>
             <!-- Email Field -->
             <div class="auth-modal__field">
                <label class="auth-modal__label visually-hidden" for="email">
@@ -1586,9 +1583,10 @@
                <div class="auth-modal__input-wrapper">
                   <i class="fa-regular fa-envelope auth-modal__input-icon" aria-hidden="true"></i>
 
-                  <input class="auth-modal__input" type="email" id="email" name="email" autocomplete="email"
-                     placeholder="Enter your email address" required>
+                  <input class="auth-modal__input js-email-input" type="email" id="email" name="email"
+                     autocomplete="email" placeholder="Enter your email address" required>
                </div>
+               <p class="auth-modal__error js-email-error" aria-live="polite" aria-atomic="true"></p>
             </div>
             <!-- Password Field -->
             <div class="auth-modal__field">
@@ -1599,25 +1597,27 @@
                <div class="auth-modal__input-wrapper">
                   <i class="fa-solid fa-lock auth-modal__input-icon" aria-hidden="true"></i>
 
-                  <input class="auth-modal__input" type="password" id="password" name="password"
+                  <input class="auth-modal__input js-password-input" type="password" id="password" name="password"
                      autocomplete="current-password" placeholder="Enter your password" required>
 
-                  <button class="auth-modal__toggle" type="button" aria-label="Show password" aria-pressed="false">
+                  <button class="auth-modal__toggle js-password-toggle" type="button" aria-label="Show password"
+                     aria-pressed="false">
                      <i class="fa-regular fa-eye" aria-hidden="true"></i>
                   </button>
 
                </div>
+               <p class="auth-modal__error js-password-error" aria-live="polite" aria-atomic="true"></p>
             </div>
             <!-- Auth Actions -->
             <div class="auth-modal__actions">
                <div class="auth-modal__secondary-actions">
-                  <a class="auth-modal__forgot-password" href="#">
+                  <a class="auth-modal__forgot-password js-forgot-password" href="#">
                      Forgot password?
                   </a>
                </div>
 
                <div class="auth-modal__primary-actions">
-                  <button class="auth-modal__submit" type="submit">
+                  <button class="auth-modal__submit js-auth-submit" type="submit">
                      Sign In
                   </button>
                </div>
@@ -1636,14 +1636,14 @@
             </div>
 
             <div class="auth-modal__social">
-               <button class="auth-modal__social-button" type="button">
+               <button class="auth-modal__social-button js-social-auth" data-provider="google" type="button">
                   <i class="fa-brands fa-google auth-modal__social-icon auth-modal__social-icon--google"
                      aria-hidden="true"></i>
                   <span class="auth-modal__social-text">
                      Google
                   </span>
                </button>
-               <button class="auth-modal__social-button" type="button">
+               <button class="auth-modal__social-button js-social-auth" data-provider="facebook" type="button">
                   <i class="fa-brands fa-facebook-f auth-modal__social-icon auth-modal__social-icon--facebook"
                      aria-hidden="true"></i>
                   <span class="auth-modal__social-text">
@@ -1653,10 +1653,10 @@
             </div>
 
             <div class="auth-modal__switch">
-               <p class="auth-modal__switch-text">
+               <p class="auth-modal__switch-text js-auth-switch-text">
                   Don't have an account?
                </p>
-               <button class="auth-modal__mode-toggle" type="button">
+               <button class="auth-modal__mode-toggle js-mode-toggle" data-mode="signup" type="button">
                   Create an account
                </button>
             </div>

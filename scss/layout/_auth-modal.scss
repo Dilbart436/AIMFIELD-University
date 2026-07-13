@@ -9,6 +9,23 @@
     justify-content: center;
     align-items: flex-start;
     padding: 4.5rem 1rem 1rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
+}
+
+.auth-modal--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.auth-modal--open .auth-modal__dialog {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .auth-modal__overlay {
@@ -28,6 +45,11 @@
     background-color: $color-surface;
     border-radius: $radius-md;
     box-shadow: $shadow-lg;
+    opacity: 0;
+    transform: translateY(1rem) scale(0.98);
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease;
 }
 
 .auth-modal__header {
@@ -93,14 +115,12 @@
 .auth-modal__form {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
     padding: 0 2rem 1.5rem;
 }
 
 .auth-modal__field {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
 }
 
 .auth-modal__label {
@@ -130,8 +150,13 @@
 
 .auth-modal__input-icon {
     flex-shrink: 0;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: $color-text-secondary;
+    transition: color 0.2s ease;
+}
+
+.auth-modal__input-wrapper:focus-within .auth-modal__input-icon {
+    color: $color-accent-hover;
 }
 
 .auth-modal__input::placeholder {
@@ -370,6 +395,15 @@
 .auth-modal__mode-toggle:focus-visible {
     outline: 2px solid $color-accent;
     outline-offset: 4px;
+}
+
+.auth-modal__error {
+    min-height: 1.25rem;
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+    color: $color-error;
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 
