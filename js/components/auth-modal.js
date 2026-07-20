@@ -290,6 +290,9 @@ function bindEventListeners() {
 }
 
 
+/**
+ * Initializes the authentication modal component.
+*/
 // -----------------------------------------------------------------------------
 // Initialization
 // -----------------------------------------------------------------------------

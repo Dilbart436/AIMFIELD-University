@@ -1,12 +1,14 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Footer ======
+// -----------------------------------------------------------------------------
+// Mobile Footer
+// -----------------------------------------------------------------------------
 .footer {
     padding: $section-spacing-mobile 0;
+    color: $footer-text;
     background: linear-gradient(135deg,
             $footer-background-start,
             $footer-background-end );
-    color: $footer-text;
 
     .footer__main {
         display: grid;
@@ -16,7 +18,7 @@
     .footer__brand {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .footer__logo-link {
@@ -56,7 +58,7 @@
     .footer__stats {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
+        gap: $card-gap;
         margin-top: 0.5rem;
     }
 
@@ -118,7 +120,7 @@
     .footer__links-link {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         color: $footer-text-muted;
         transition: color 0.3s ease;
     }
@@ -146,7 +148,7 @@
     .footer__programs-link {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         color: $footer-text-muted;
         transition: color 0.3s ease;
     }
@@ -163,7 +165,7 @@
     .footer__programs-cta {
         display: inline-flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         margin-top: 1rem;
         font-weight: 600;
         color: $footer-accent-green;
@@ -186,7 +188,7 @@
     // ====== Contact Us ======
     .footer__contact-list {
         display: grid;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .footer__contact-item {
@@ -235,7 +237,7 @@
     // ====== Footer Bottom ======
     .footer__bottom {
         display: grid;
-        gap: 0.5rem;
+        gap: $card-gap;
         margin-top: 2rem;
         padding-top: 1.5rem;
         border-top: 1px solid $footer-border;
@@ -329,11 +331,12 @@
     .footer__social-link:hover {
         transform: translateY(-0.1875rem) scale(1.05);
     }
-
 }
 
 
-// ====== Tablet Footer ======
+// -----------------------------------------------------------------------------
+// Tablet Footer
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-tablet) {
 
     .footer {
@@ -374,7 +377,9 @@
 }
 
 
-// ====== Desktop Footer ======
+// -----------------------------------------------------------------------------
+// Desktop Footer
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-desktop) {
 
     .footer {

@@ -1,9 +1,15 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Nav ======
+// -----------------------------------------------------------------------------
+// Mobile Navigation
+// -----------------------------------------------------------------------------
+
 .header {
-    background-color: $color-surface;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
 
     .nav {
         position: relative;
@@ -29,7 +35,8 @@
 
     .nav__toggle-icon {
         font-size: 1.5rem;
-        color: $color-primary;
+        color: var(--color-text-primary);
+        transition: color 0.3s ease;
     }
 
     .nav__brand {
@@ -43,16 +50,17 @@
     }
 
     .nav__brand:focus-visible {
-        outline: 3px solid $color-accent;
-        border-radius: 0.75rem;
-        background-color: rgba(21, 94, 117, 0.04);
-        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.12);
+        outline: 3px solid var(--color-accent);
+        border-radius: $radius-sm;
+        background-color: var(--color-focus-background);
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
     }
 
     .nav__logo {
         font-size: 1.75rem;
-        color: $color-accent;
+        color: var(--color-accent);
         flex-shrink: 0;
+        transition: color 0.3s ease;
     }
 
     .nav__brand-text {
@@ -65,14 +73,16 @@
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0.03rem;
-        color: $color-primary;
+        color: var(--color-text-primary);
+        transition: color 0.3s ease;
     }
 
     .nav__brand-subtitle {
         font-size: 0.55rem;
         font-weight: 600;
         letter-spacing: 0.16rem;
-        color: $color-primary;
+        color: var(--color-text-secondary);
+        transition: color 0.3s ease;
     }
 
     .nav__links {
@@ -85,19 +95,20 @@
         left: 1rem;
         right: 1rem;
         width: auto;
-        z-index: 1000;
+        z-index: $z-dropdown;
         padding: 1rem;
-        background-color: $color-surface;
-        border-top: 1px solid rgba(148, 163, 184, 0.12);
-        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-        border-radius: 1rem;
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-layered);
+        border-radius: $radius-base;
         overflow: hidden;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
         transform: translateY(-0.5rem);
-
         transition:
+            background-color 0.3s ease,
+            border-color 0.3s ease,
             opacity 0.2s ease,
             visibility 0.2s ease,
             transform 0.2s ease;
@@ -118,12 +129,12 @@
     .nav__trigger {
         display: block;
         padding: 0.5rem 1rem;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
         font-weight: 500;
-        border-radius: 0.75rem;
+        border-radius: $radius-sm;
         transition:
-            color 0.3s ease;
-
+            color 0.3s ease,
+            background-color 0.3s ease;
     }
 
     .nav__trigger {
@@ -138,20 +149,18 @@
 
     .nav__link:focus-visible,
     .nav__trigger:focus-visible {
-        outline: 3px solid $color-accent;
-        background-color: rgba(21, 94, 117, 0.06);
-        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
+        outline: 3px solid var(--color-accent);
+        background-color: var(--color-hover-background);
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
     }
 
     .mega-menu {
         display: none;
         padding: 1rem;
-        background-color: rgba(37, 99, 235, 0.04);
-        border-radius: 0.75rem;
-        border: 1px solid rgba(148, 163, 184, 0.12);
-        box-shadow:
-            0 8px 16px rgba(15, 23, 42, 0.08),
-            0 2px 4px rgba(15, 23, 42, 0.04);
+        background-color: var(--color-surface);
+        border-radius: $radius-sm;
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-layered);
     }
 
     // Mega menu active-state styles.
@@ -161,7 +170,7 @@
     }
 
     .nav__item--mega-active .nav__trigger {
-        color: $color-accent;
+        color: var(--color-accent);
     }
 
     .nav__trigger-icon {
@@ -173,14 +182,15 @@
     }
 
     .mega-menu__item:not(:last-child) {
-        border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+        border-bottom: 1px solid var(--color-border);
     }
 
     .mega-menu__heading {
         margin-bottom: 0.5rem;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
         font-size: 1rem;
         font-weight: 700;
+        transition: color 0.3s ease;
     }
 
     .mega-menu__list {
@@ -192,12 +202,12 @@
     .mega-menu__link {
         display: block;
         padding: 0.25rem;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
         transition: color 0.3s ease;
     }
 
     .mega-menu__link:hover {
-        color: $color-accent;
+        color: var(--color-accent);
     }
 
     .mega-menu__cta {
@@ -206,13 +216,13 @@
         gap: 0.5rem;
         padding: 0.25rem;
         margin-top: 0.5rem;
-        color: $color-accent;
+        color: var(--color-accent);
         font-weight: 600;
         transition: color 0.3s ease;
     }
 
     .mega-menu__cta:hover {
-        color: $color-accent-hover;
+        color: var(--color-accent-hover);
     }
 
     .mega-menu__cta-icon {
@@ -228,7 +238,7 @@
     }
 
     .mega-menu__action:hover {
-        color: $color-accent-hover;
+        color: var(--color-accent-hover);
     }
 
     .mega-menu__action-icon {
@@ -242,15 +252,15 @@
     .mega-menu__link:focus-visible,
     .mega-menu__cta:focus-visible,
     .mega-menu__action:focus-visible {
-        outline: none;
-        border-radius: 0.5rem;
-        background-color: rgba(21, 94, 117, 0.06);
-        box-shadow: 0 0 0 3px rgba(21, 94, 117, 0.14);
+        outline: 3px solid var(--color-accent);
+        border-radius: $radius-xs;
+        background-color: var(--color-hover-background);
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
     }
 
-    // This below one line need inspection.
+    // TODO: Review active-state background color for accessibility.
     .nav__link:active {
-        background-color: rgba(37, 99, 235, 0.12);
+        background-color: var(--color-active-background);
     }
 
     // --------------------------------------------------
@@ -260,6 +270,102 @@
         display: none;
     }
 
+    .nav__item--preferences {
+        margin-top: 1.25rem;
+    }
+
+    .nav__preferences-heading {
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--color-border);
+        color: var(--color-text-secondary);
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition:
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .nav__theme-button {
+        border: none;
+        color: var(--color-text-primary);
+        background-color: transparent;
+        cursor: pointer;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease;
+    }
+
+    .nav__theme-button:hover {
+        background-color: var(--color-hover-background);
+    }
+
+    .nav__theme-button:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+    }
+
+    .nav__theme-button:active {
+        background-color: var(--color-hover-background);
+    }
+
+    .nav__theme-button--mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.25rem 0 0.75rem;
+    }
+
+    .nav__theme-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .nav__theme-icon {
+        color: var(--color-text-primary);
+        font-size: 1rem;
+        flex-shrink: 0;
+        transition: color 0.3s ease;
+    }
+
+    .nav__theme-text {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-text-primary);
+        transition: color 0.3s ease;
+    }
+
+    .nav__theme-switch {
+        display: flex;
+        align-items: center;
+        width: 2.75rem;
+        height: 1.5rem;
+        padding: 0.125rem;
+        background-color: var(--color-border-strong);
+        border: 1px solid var(--color-border);
+        border-radius: $radius-pill;
+        transition:
+            background-color 0.3s ease,
+            border 0.3s ease;
+    }
+
+    .nav__theme-thumb {
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+        border-radius: 50%;
+        background-color: var(--color-surface);
+        transition: transform 0.3s ease;
+        will-change: transform;
+
+        [data-theme="dark"] & {
+            transform: translateX(1.25rem);
+        }
+    }
+
     .nav__mobile-cta {
         display: inline-flex;
         width: 100%;
@@ -267,10 +373,10 @@
         align-items: center;
         gap: 0.5rem;
         padding: 0.75rem 1rem;
-        border: 1.8px solid $color-accent;
-        border-radius: 999px;
+        border: 1.8px solid var(--color-accent-outline);
+        border-radius: $radius-pill;
         background-color: transparent;
-        color: $color-accent;
+        color: var(--color-accent-outline);
         font-weight: 600;
         cursor: pointer;
         transition:
@@ -281,10 +387,10 @@
     }
 
     .nav__mobile-cta:hover {
-        background-color: $color-accent;
-        color: $color-surface;
+        background-color: var(--color-accent);
+        color: var(--color-text-inverse);
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(21, 94, 117, 0.18);
+        box-shadow: var(--shadow-button);
     }
 
     .nav__mobile-cta:active {
@@ -293,16 +399,18 @@
     }
 
     .nav__mobile-cta:focus-visible {
-        outline: 3px solid $color-accent;
+        outline: 3px solid var(--color-accent);
         outline-offset: 2px;
-        color: $color-surface;
-        background-color: $color-accent;
-        box-shadow: 0 0 0 4px rgba(21, 94, 117, 0.18);
+        color: var(--color-text-inverse);
+        background-color: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
     }
 }
 
 
-// ====== Tablet Nav ======
+// -----------------------------------------------------------------------------
+// Tablet Navigation
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-tablet) {
 
     .header {
@@ -338,32 +446,32 @@
             display: inline-flex;
             align-items: center;
             flex-shrink: 0;
-            gap: 0.5rem;
+            gap: 0.25rem;
             min-height: 2.5rem;
             padding: 0.625rem 1rem;
-            border: 1.8px solid $color-accent;
-            border-radius: 999px;
+            border: 2px solid var(--color-accent-outline);
+            border-radius: $radius-pill;
             background-color: transparent;
-            color: $color-accent;
+            color: var(--color-accent-outline);
             font-size: 0.8125rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition:
                 background-color 0.25s ease,
                 color 0.25s ease,
                 transform 0.25s ease,
                 box-shadow 0.25s ease;
+        }
 
-            i {
-                font-size: 0.875rem;
-            }
+        .nav__cta i {
+            font-size: 0.875rem;
         }
 
         .nav__cta:hover {
-            background-color: $color-accent;
-            color: $color-surface;
+            background-color: var(--color-accent-hover);
+            color: var(--color-text-inverse);
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(21, 94, 117, 0.18);
+            box-shadow: var(--shadow-button);
         }
 
         .nav__cta:active {
@@ -372,11 +480,11 @@
         }
 
         .nav__cta:focus-visible {
-            outline: 3px solid $color-accent;
+            outline: 3px solid var(--color-accent);
             outline-offset: 2px;
-            color: $color-surface;
-            background-color: $color-accent;
-            box-shadow: 0 0 0 4px rgba(21, 94, 117, 0.18);
+            color: var(--color-text-inverse);
+            background-color: var(--color-accent);
+            box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
         }
 
         .nav__mobile-cta {
@@ -388,11 +496,12 @@
             justify-content: center;
         }
     }
-
 }
 
 
-// ====== Desktop Nav ======
+// -----------------------------------------------------------------------------
+// Desktop Navigation
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-desktop) {
 
     .header {
@@ -411,9 +520,26 @@
         }
 
         .nav__actions {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: $card-gap;
             flex-shrink: 0;
             margin-left: 0;
+        }
+
+        .nav__theme-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        .nav__item--preferences,
+        .nav__theme-button--mobile {
+            display: none;
         }
 
         .nav__brand {
@@ -446,7 +572,6 @@
 
         .nav__cta {
             padding: 0.625rem 0.875rem;
-            border: 2px solid $color-accent;
             font-size: 0.875rem;
         }
 
@@ -466,7 +591,7 @@
             right: auto;
             padding: 0;
             background-color: transparent;
-            border-top: none;
+            border: none;
             border-radius: 0;
             box-shadow: none;
             overflow: visible;
@@ -491,7 +616,7 @@
             bottom: 0.35rem;
             width: 0;
             height: 2px;
-            background-color: $color-accent;
+            background-color: var(--color-accent);
             transition: width 0.3s ease;
         }
 
@@ -501,7 +626,7 @@
 
         .nav__link:hover {
             background-color: transparent;
-            color: $color-accent;
+            color: var(--color-accent-hover);
         }
 
         .nav__item {
@@ -515,7 +640,7 @@
         }
 
         .nav__item--mega-active .nav__trigger {
-            background-color: $color-surface;
+            color: var(--color-accent);
         }
 
         .mega-menu {
@@ -526,16 +651,18 @@
             left: 50%;
             transform: translate(-50%, 0.25rem);
             padding: 1rem 1.5rem 1.5rem;
-            background-color: $color-surface;
-            border: 1px solid rgba(148, 163, 184, 0.12);
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
             border-top: none;
-            border-radius: 0 0 1rem 1rem;
-            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+            border-radius: 0 0 $radius-base $radius-base;
+            box-shadow: var(--shadow-layered);
             opacity: 0;
             pointer-events: none;
             visibility: hidden;
-
-            transition: opacity 0.3s ease-out,
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                opacity 0.3s ease-out,
                 transform 0.3s ease-out;
         }
 
@@ -564,32 +691,38 @@
             flex-direction: column;
             justify-content: flex-start;
             padding: 1.25rem 1.5rem 1.5rem;
-            background-color: rgba(21, 94, 117, 0.04);
-            border: 1px solid rgba(21, 94, 117, 0.12);
-            border-radius: 1rem;
+            background-color: var(--color-surface-alt);
+            border: 1px solid var(--color-border);
+            border-radius: $radius-base;
+            transition:
+                background-color 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .mega-menu__eyebrow {
             display: inline-block;
             margin-bottom: 0.75rem;
-            color: $color-accent;
+            color: var(--color-accent);
             font-weight: 700;
             letter-spacing: 0.08rem;
             text-transform: uppercase;
+            transition: color 0.3s ease;
         }
 
         .mega-menu__title {
             margin-bottom: 0.75rem;
-            color: $color-text-primary;
+            color: var(--color-text-primary);
             font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.3;
+            transition: color 0.3s ease;
         }
 
         .mega-menu__description {
             margin-bottom: 1.25rem;
-            color: $color-text-secondary;
+            color: var(--color-text-secondary);
             line-height: 1.6;
+            transition: color 0.3s ease;
         }
 
         .mega-menu__action {
@@ -598,15 +731,18 @@
             gap: 0.5rem;
             align-self: flex-start;
             padding: 0.25rem;
-            color: $color-accent;
+            color: var(--color-accent);
             font-weight: 600;
             transition: color 0.3s ease;
+        }
+
+        .mega-menu__action:hover {
+            color: var(--color-accent-hover);
         }
 
         .mega-menu__list {
             grid-template-columns: repeat(3, 1fr);
             gap: 1rem;
         }
-
     }
 }

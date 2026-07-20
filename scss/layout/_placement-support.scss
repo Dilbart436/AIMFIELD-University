@@ -1,9 +1,11 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Placement & Career Support ======
+// -----------------------------------------------------------------------------
+// Mobile Placement & Career Support
+// -----------------------------------------------------------------------------
 .placement-support {
     padding: $section-spacing-mobile 0;
-    background-color: $color-placement-background;
+    background-color: var(--color-surface-alt);
 
     .placement-support__overview {
         display: flex;
@@ -14,24 +16,24 @@
     .placement-support__content {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .placement-support__topbar {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .placement-support__label-group {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .placement-support__label-group i {
         font-size: 0.875rem;
-        color: $color-accent;
+        color: var(--color-text-primary);
     }
 
     .placement-support__label {
@@ -39,35 +41,59 @@
         font-weight: 700;
         letter-spacing: 1.5px;
         text-transform: uppercase;
-        color: $color-accent;
+        color: var(--color-accent);
     }
 
     .placement-support__link {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         font-size: 0.875rem;
         font-weight: 600;
-        color: $color-accent;
+        color: var(--color-accent);
         transition: color 0.3s ease;
+    }
+
+    .placement-support__link:hover {
+        color: var(--color-accent-hover);
+    }
+
+    .placement-support__link i {
+        color: var(--color-accent);
+        transition:
+            color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .placement-support__link:hover i {
+        color: var(--color-accent-hover);
+        transform: translateX(4px);
+    }
+
+    .placement-support__link:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 4px;
+        border-radius: $radius-xs;
+        background-color: var(--color-hover-background);
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
     }
 
     .placement-support__title {
         font-size: 1.5rem;
         font-weight: 700;
         line-height: 1.2;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
     }
 
     .placement-support__description {
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         line-height: 1.6;
     }
 
     .placement-support__stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .placement-support__stat-card {
@@ -76,9 +102,9 @@
         align-items: center;
         gap: 0.25rem;
         padding: 0.75rem;
-        background-color: $color-surface;
+        background-color: var(--color-surface);
         border-radius: $radius-md;
-        box-shadow: $shadow-sm;
+        box-shadow: var(--shadow-sm);
         text-align: center;
     }
 
@@ -89,31 +115,29 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background-color: rgba(21, 94, 117, 0.1);
+        background-color: var(--color-surface-alt);
     }
 
     .placement-support__stat-icon i {
         font-size: 1rem;
-        color: $color-accent;
+        color: var(--color-text-primary);
     }
 
     .placement-support__stat-value {
         font-size: 1.25rem;
         font-weight: 700;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
     }
 
     .placement-support__stat-label {
         font-size: 0.875rem;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
     }
 
     .placement-support__media {
         overflow: hidden;
         border-radius: $radius-lg;
-        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18),
-            -16px 0 32px rgba(15, 23, 42, 0.12);
-
+        box-shadow: var(--shadow-media);
     }
 
     .placement-support__image {
@@ -131,56 +155,69 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         padding: $card-padding;
-        background-color: $color-surface;
+        background-color: var(--color-surface);
         border-radius: $radius-lg;
-        box-shadow: $shadow-md;
+        box-shadow: var(--shadow-md);
         text-align: center;
-        transition: transform 0.3s ease,
+        transition:
+            transform 0.3s ease,
             box-shadow 0.3s ease;
     }
 
+    .placement-support__feature-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .placement-support__feature-card:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+        box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
+    }
+
     .placement-support__feature-icon {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background-color: rgba(21, 94, 117, 0.1);
+        background-color: var(--color-surface-alt);
+        box-shadow: var(--shadow-sm);
     }
 
     .placement-support__feature-icon i {
         font-size: 1.25rem;
-        color: $color-accent;
+        color: var(--color-text-primary);
     }
 
     .placement-support__feature-title {
         font-size: 1.125rem;
-        font-weight: 700;
-        color: $color-text-primary;
+        font-weight: 600;
+        color: var(--color-text-primary);
     }
 
     .placement-support__feature-list {
         align-self: stretch;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: $card-gap;
         text-align: left;
     }
 
     .placement-support__feature-list li {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        color: $color-text-secondary;
+        gap: $card-gap;
+        color: var(--color-text-secondary);
     }
 
     .placement-support__feature-list i {
         flex-shrink: 0;
         font-size: 0.875rem;
-        color: $color-accent;
+        color: var(--color-text-primary);
     }
 
     .swiper-pagination {
@@ -191,7 +228,7 @@
     .swiper-pagination-bullet {
         width: 0.625rem;
         height: 0.625rem;
-        background-color: $color-text-secondary;
+        background-color: var(--color-text-secondary);
         opacity: 1;
         transition:
             width 0.3s ease,
@@ -200,7 +237,7 @@
 
     .swiper-pagination-bullet-active {
         width: 1.5rem;
-        border-radius: 999px;
+        border-radius: $radius-pill;
         background-color: #0284C7;
     }
 
@@ -210,15 +247,15 @@
         gap: 1rem;
         margin-top: 1rem;
         padding: $card-padding;
-        background-color: $color-surface;
+        background-color: var(--color-surface);
         border-radius: $radius-lg;
-        box-shadow: $shadow-md;
+        box-shadow: var(--shadow-md);
     }
 
     .placement-support__cta-content {
         display: flex;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: $card-gap;
     }
 
     .placement-support__cta-icon {
@@ -226,25 +263,26 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 50%;
-        background-color: rgba(21, 94, 117, 0.1);
+        background-color: var(--color-surface-alt);
+        box-shadow: var(--shadow-sm);
     }
 
     .placement-support__cta-icon i {
-        font-size: 1.25rem;
-        color: $color-accent;
+        font-size: 1.125rem;
+        color: var(--color-text-primary);
     }
 
     .placement-support__cta-title {
         font-size: 1rem;
         font-weight: 700;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
     }
 
     .placement-support__cta-text {
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
         line-height: 1.4;
     }
 
@@ -258,7 +296,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.5rem;
+        gap: $card-gap;
         padding: 0.875rem 1rem;
         border-radius: $radius-md;
         font-size: 0.95rem;
@@ -267,31 +305,67 @@
     }
 
     .placement-support__cta-button i {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+
+    .placement-support__cta-button:active {
+        transform: translateY(1px);
     }
 
     .placement-support__cta-button--primary {
-        background-color: $color-accent;
-        color: $color-surface;
-        transition: background-color 0.3s ease,
-            transform 0.3s ease;
+        background-color: var(--color-accent);
+        color: var(--color-text-inverse);
+        transition:
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .placement-support__cta-button--primary:hover {
+        background-color: var(--color-accent-hover);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-button);
+    }
+
+    .placement-support__cta-button--primary:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+        color: var(--color-text-inverse);
+        background-color: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
     }
 
     .placement-support__cta-button--secondary {
-        border: 1px solid $color-accent;
-        color: $color-accent;
-        transition: background-color 0.3s ease,
+        border: 1px solid var(--color-accent);
+        color: var(--color-accent);
+        transition:
+            background-color 0.3s ease,
             color 0.3s ease,
-            transform 0.3s ease;
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+    }
+
+    .placement-support__cta-button--secondary:hover {
+        color: var(--color-accent-hover);
+        transform: translateY(-2px);
+        background-color: var(--color-hover-background);
+        box-shadow: var(--shadow-button);
+    }
+
+    .placement-support__cta-button--secondary:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+        box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
     }
 }
 
 
-// ====== Tablet Placement & Career Support ======
+// -----------------------------------------------------------------------------
+// Tablet Placement & Career Support
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-tablet) {
 
     .placement-support {
-
         padding: $section-spacing-tablet 0;
 
         .placement-support__overview {
@@ -305,6 +379,10 @@
             height: 26rem;
         }
 
+        .placement-support__slider {
+            padding: 0.5rem 0 0.5rem 0.25rem;
+        }
+
         .placement-support__cta-actions {
             flex-direction: row;
         }
@@ -313,37 +391,13 @@
             flex: 1;
             padding: 1rem 1.25rem;
         }
-
-        .placement-support__feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: $shadow-lg;
-        }
-
-        .placement-support__cta-button--primary:hover {
-            transform: translateY(-2px);
-        }
-
-        .placement-support__cta-button--secondary:hover {
-            transform: translateY(-2px);
-        }
-
-        .placement-support__link i {
-            transition: transform 0.3s ease;
-        }
-
-        .placement-support__link:hover i {
-            transform: translateX(4px);
-        }
-
-        .placement-support__cta-button:active {
-            transform: translateY(1px);
-        }
     }
-
 }
 
 
-// ====== Desktop Placement & Career Support ======
+// -----------------------------------------------------------------------------
+// Desktop Placement & Career Support
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-desktop) {
 
     .placement-support {

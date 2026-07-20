@@ -1,0 +1,111 @@
+@use "../abstracts/variables" as *;
+
+// ============================================================================
+// Light Theme (Default)
+// ============================================================================
+:root {
+
+    // -------------------------------------------------------------------------
+    // Background Colors
+    // -------------------------------------------------------------------------
+    --color-background: #{$color-background};
+    --color-surface: #{$color-surface};
+    --color-surface-alt: #{$color-surface-alt};
+
+    // -------------------------------------------------------------------------
+    // Text Colors
+    // -------------------------------------------------------------------------
+    --color-text-primary: #{$color-text-primary};
+    --color-text-secondary: #{$color-text-secondary};
+    --color-text-inverse: #{$color-text-inverse};
+
+    // -------------------------------------------------------------------------
+    // Border Colors
+    // -------------------------------------------------------------------------
+    --color-border: #{$color-border};
+    --color-border-strong: #{$color-border-strong};
+
+    // -------------------------------------------------------------------------
+    // Brand Colors
+    // -------------------------------------------------------------------------
+    --color-accent: #{$color-accent};
+    --color-accent-hover: #{$color-accent-hover};
+    --color-accent-outline: #{$color-accent};
+
+    // -------------------------------------------------------------------------
+    // Feedback Colors
+    // -------------------------------------------------------------------------
+    --color-error: #{$color-error};
+
+    // -------------------------------------------------------------------------
+    // State Colors
+    // -------------------------------------------------------------------------
+    --color-focus-background: #{$color-focus-background};
+    --color-focus-ring: #{$color-focus-ring};
+    --color-focus-ring-strong: #{$color-focus-ring-strong};
+    --color-hover-background: #{$color-hover-background};
+
+    // -------------------------------------------------------------------------
+    // Active State
+    // -------------------------------------------------------------------------
+    --color-active-background: #{$color-active-background};
+
+    // -------------------------------------------------------------------------
+    // Shadow Tokens
+    // -------------------------------------------------------------------------
+    --shadow-sm: #{$shadow-sm};
+    --shadow-md: #{$shadow-md};
+    --shadow-lg: #{$shadow-lg};
+
+    --shadow-overlay: #{$shadow-overlay};
+    --shadow-layered: #{$shadow-layered};
+    --shadow-media: #{$shadow-media};
+
+    --shadow-button: #{$shadow-button};
+
+
+    // -------------------------------------------------------------------------
+    // Decorative Colors
+    // -------------------------------------------------------------------------
+    --color-background-overlay: #{$color-background-overlay};
+    --color-background-overlay-light: #{$color-background-overlay-light};
+    --color-overlay-dark: #{$color-overlay-dark};
+    --color-accent-glow: #{$color-accent-glow};
+    --color-pagination-bullet: #{$color-pagination-bullet};
+
+
+    // -------------------------------------------------------------------------
+    // Component-Specific Colors
+    // -------------------------------------------------------------------------
+    --color-hero-background: #{$color-hero-background};
+}
+
+
+// ============================================================================
+// Dark Theme Overrides
+// ============================================================================
+[data-theme="dark"] {
+    --color-background: #020617;
+    --color-surface: #0F172A;
+    --color-surface-alt: #1E293B;
+
+    --color-text-primary: #F8FAFC;
+    --color-text-secondary: #CBD5E1;
+    --color-text-inverse: #FFFFFF;
+
+    --color-border: #334155;
+    --color-border-strong: #475569;
+
+    --color-accent: #14532D;
+    --color-accent-hover: #166534;
+    --color-accent-outline: #16A34A;
+
+    --color-hover-background: rgba(255, 255, 255, 0.06);
+
+    --color-focus-ring: rgba(21, 94, 117, 0.35);
+    --color-focus-ring-strong: rgba(21, 94, 117, 0.5);
+
+    .hero {
+        background: var(--color-background);
+    }
+}

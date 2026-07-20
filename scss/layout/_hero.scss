@@ -1,15 +1,18 @@
 @use "../abstracts/variables" as *;
 
-// ====== Mobile Hero ====== 
+// -----------------------------------------------------------------------------
+// Mobile Hero
+// -----------------------------------------------------------------------------
 .hero {
     padding: $section-spacing-mobile 0;
     position: relative;
     overflow: hidden;
     background: linear-gradient(180deg,
-            rgba(203, 213, 225, 0.35) 0%,
-            rgba(203, 213, 225, 0.05) 100%);
+            var(--color-background-overlay) 0%,
+            var(--color-background-overlay-light) 100%);
+    transition: background 0.3s ease;
 
-    &::before {
+    .hero::before {
         content: "";
         position: absolute;
         top: -10rem;
@@ -17,7 +20,7 @@
         width: 22rem;
         height: 22rem;
         border-radius: 50%;
-        background: rgba(21, 94, 117, 0.12);
+        background: var(--color-accent-glow);
         filter: blur(80px);
         pointer-events: none;
     }
@@ -37,22 +40,25 @@
     .hero__eyebrow {
         font-size: 0.875rem;
         font-weight: 600;
-        color: $color-accent;
+        color: var(--color-accent);
         text-transform: uppercase;
         letter-spacing: 0.08em;
+        transition: color 0.3s ease;
     }
 
     .hero__title {
         font-size: 2rem;
         font-weight: 700;
         line-height: 1.15;
-        color: $color-text-primary;
+        color: var(--color-text-primary);
+        transition: color 0.3s ease;
     }
 
     .hero__description {
         font-size: 1rem;
         line-height: 1.7;
-        color: $color-text-secondary;
+        color: var(--color-text-secondary);
+        transition: color 0.3s ease;
     }
 
     .hero__actions {
@@ -69,20 +75,34 @@
         gap: 0.75rem;
         min-height: 3.5rem;
         padding: 0.75rem 1.25rem;
-        border-radius: 0.75rem;
+        border-radius: $radius-sm;
         font-weight: 600;
         white-space: nowrap;
-        transition: 0.3s ease;
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
     }
 
     .hero__button--primary {
-        background-color: $color-accent;
-        color: $color-surface;
+        background-color: var(--color-accent);
+        color: var(--color-text-inverse);
     }
 
     .hero__button--primary:hover {
         transform: translateY(-2px);
-        background-color: #0f766e;
+        background-color: var(--color-accent-hover);
+        box-shadow: var(--shadow-button);
+    }
+
+    .hero__button--primary:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+        color: var(--color-text-inverse);
+        background-color: var(--color-accent);
+        box-shadow: 0 0 0 4px var(--color-focus-ring-strong);
     }
 
     .hero__button--primary:active {
@@ -90,13 +110,21 @@
     }
 
     .hero__button--secondary {
-        border: 1px solid $color-text-secondary;
-        color: $color-text-primary;
+        border: 1px solid var(--color-accent-outline);
+        color: var(--color-accent-outline);
     }
 
     .hero__button--secondary:hover {
         transform: translateY(-2px);
-        background-color: rgba(15, 23, 42, 0.04);
+        background-color: var(--color-hover-background);
+        box-shadow: var(--shadow-button);
+    }
+
+    .hero__button--secondary:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
+        background-color: var(--color-hover-background);
+        box-shadow: 0 0 0 3px var(--color-focus-ring);
     }
 
     .hero__button--secondary:active {
@@ -108,15 +136,17 @@
     }
 
     .hero__slider {
-        border-radius: 1.5rem;
+        border-radius: $radius-lg;
         overflow: hidden;
         isolation: isolate;
-        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+        box-shadow: var(--shadow-lg);
+        transition: box-shadow 0.3s ease;
     }
 
     .hero__slide {
         height: 20rem;
-        background-color: $color-secondary;
+        background-color: var(--color-hero-background);
+        transition: background-color 0.3s ease;
     }
 
     .hero__illustration {
@@ -136,7 +166,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        z-index: 10;
+        z-index: $z-floating;
         width: 3rem;
         height: 3rem;
         display: flex;
@@ -144,11 +174,17 @@
         justify-content: center;
         border: none;
         border-radius: 50%;
-        background-color: rgba(15, 23, 42, 0.3);
-        color: $color-surface;
+        background-color: var(--color-overlay-dark);
+        color: var(--color-text-inverse);
         cursor: pointer;
         backdrop-filter: blur(10px);
-        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+        box-shadow: var(--shadow-overlay);
+        transition: background-color 0.3s ease;
+    }
+
+    .hero__navigation:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
     }
 
     .hero__navigation--prev {
@@ -169,17 +205,26 @@
     .swiper-pagination-bullet {
         width: 0.75rem;
         height: 0.75rem;
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: var(--color-pagination-bullet);
         opacity: 1;
+        transition: background-color 0.3s ease;
+    }
+
+    .swiper-pagination-bullet:focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 2px;
     }
 
     .swiper-pagination-bullet-active {
-        background-color: $color-surface;
+        background-color: var(--color-text-inverse);
+        transition: background-color 0.3s ease;
     }
 }
 
 
-// ====== Tablet Hero ======
+// -----------------------------------------------------------------------------
+// Tablet Hero
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-tablet) {
     .hero {
         padding: $section-spacing-tablet 0;
@@ -195,7 +240,6 @@
             flex: 1;
             min-width: 0;
         }
-
 
         .hero__actions {
             flex-direction: row;
@@ -215,7 +259,9 @@
 }
 
 
-// ====== Desktop Hero ====== 
+// -----------------------------------------------------------------------------
+// Desktop Hero
+// -----------------------------------------------------------------------------
 @media (min-width: $breakpoint-desktop) {
 
     .hero {
@@ -295,7 +341,5 @@
             object-fit: cover;
             transition: transform 0.4s ease;
         }
-
     }
-
 }
