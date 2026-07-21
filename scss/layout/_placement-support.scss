@@ -238,7 +238,7 @@
     .swiper-pagination-bullet-active {
         width: 1.5rem;
         border-radius: $radius-pill;
-        background-color: #0284C7;
+        background-color: var(--color-accent);
     }
 
     .placement-support__cta {
