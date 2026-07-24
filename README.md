@@ -1,6 +1,6 @@
 # AIMFIELD University
 
-A modern, responsive university website built with HTML, SCSS, Vanilla JavaScript, and Vite.
+A modern, responsive university website built with HTML, CSS, Vanilla JavaScript, and Vite.
 
 This project is being developed to practice professional frontend development workflows, responsive design, scalable architecture, accessibility, and modern UI implementation.
 
@@ -9,7 +9,7 @@ This project is being developed to practice professional frontend development wo
 ## Tech Stack
 
 * HTML5
-* SCSS
+* CSS
 * Vanilla JavaScript
 * Vite
 * Swiper.js
@@ -24,7 +24,7 @@ This project is being developed to practice professional frontend development wo
 * Responsive Design
 * Reusable Components
 * Accessibility-Aware Development
-* Scalable SCSS Architecture
+* Scalable CSS Architecture
 * Performance-Conscious Implementation
 
 ---
@@ -99,13 +99,13 @@ AIMFIELD-University/
 ├── dist/
 ├── js/
 ├── public/
-├── scss/
-│   ├── abstracts/
+├── css/
 │   ├── base/
 │   ├── components/
 │   ├── layout/
 │   ├── themes/
-│   └── main.scss
+│   ├── utilities/
+│   └── main.css
 ├── index.html
 ├── package.json
 ├── package-lock.json
@@ -118,7 +118,7 @@ AIMFIELD-University/
 ## Development Workflow
 
 1. Semantic HTML Structure
-2. Mobile SCSS Development
+2. Mobile CSS Development
 3. Tablet Refinement
 4. Desktop Refinement
 5. Accessibility Improvements
@@ -160,7 +160,7 @@ npm run preview
 This project is focused on improving skills in:
 
 * Semantic HTML
-* Modern SCSS Architecture
+* Modern CSS Architecture
 * Responsive Web Design
 * Vanilla JavaScript
 * Frontend Project Organization

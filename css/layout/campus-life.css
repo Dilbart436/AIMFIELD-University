@@ -1,0 +1,255 @@
+/* ==========================================================================
+   Mobile Campus Life
+   ========================================================================== */
+.campus-life {
+    padding: var(--section-spacing-mobile) 0;
+}
+
+.campus-life__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.campus-life__content {
+    flex: 1;
+}
+
+.campus-life__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+}
+
+.campus-life__description {
+    margin-top: 0.5rem;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.campus-life__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: var(--color-accent);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.campus-life__cta:hover {
+    color: var(--color-accent-hover);
+}
+
+.campus-life__cta:focus-visible {
+    outline: 3px solid var(--color-accent-outline);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-hover-background);
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.campus-life__cta-icon {
+    display: flex;
+    align-items: center;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.campus-life__cta:hover .campus-life__cta-icon {
+    color: var(--color-accent-hover);
+    transform: translateX(0.25rem);
+}
+
+.campus-life__slider {
+    display: flex;
+    margin-top: 0.75rem;
+    gap: var(--space-sm);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.campus-life__slider::-webkit-scrollbar {
+    display: none;
+}
+
+.campus-life__card {
+    flex: 0 0 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    cursor: default;
+    scroll-snap-align: start;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campus-life__card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.campus-life__image-wrapper {
+    height: 10rem;
+}
+
+.campus-life__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.campus-life__card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: 0.5rem 0.75rem 1rem;
+}
+
+.campus-life__card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.campus-life__icon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-circle);
+    background-color: var(--color-surface-alt);
+    box-shadow: var(--shadow-sm);
+}
+
+.campus-life__icon i {
+    font-size: 0.75rem;
+    color: var(--color-text-primary);
+}
+
+.campus-life__card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text-primary);
+}
+
+.campus-life__card-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+}
+
+.campus-life__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+.campus-life__link:hover {
+    color: var(--color-accent-hover);
+}
+
+.campus-life__link:focus-visible {
+    outline: 3px solid var(--color-accent-outline);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+    background-color: var(--color-hover-background);
+    box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.campus-life__link-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.campus-life__link:hover .campus-life__link-icon {
+    transform: translateX(0.25rem);
+}
+
+
+
+/* ==========================================================================
+   Tablet Campus Life
+   ========================================================================== */
+@media (min-width: 768px) {
+    .campus-life {
+        padding: var(--section-spacing-tablet) 0;
+    }
+
+    .campus-life__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .campus-life__slider {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0.75rem;
+        row-gap: 0.75rem;
+        overflow-x: visible;
+    }
+
+    .campus-life__image-wrapper {
+        height: 12rem;
+    }
+
+    .campus-life__card-description {
+        line-height: 1.4;
+    }
+}
+
+
+/* ==========================================================================
+   Desktop Campus Life
+   ========================================================================== */
+@media (min-width: 1024px) {
+    .campus-life__slider {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .campus-life__card-content {
+        padding: 0.75rem 0.75rem 1rem;
+    }
+
+    .campus-life__icon {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .campus-life__icon i {
+        font-size: 1rem;
+    }
+
+    .campus-life__card-title {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .campus-life__card-description {
+        line-height: 1.4;
+        text-wrap: balance;
+    }
+
+    .campus-life__image-wrapper {
+        height: 8rem;
+    }
+}

@@ -1,12 +1,10 @@
-@use "../abstracts/variables" as *;
-
-// -----------------------------------------------------------------------------
-// Mobile Auth Modal
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Mobile Auth Modal
+   ========================================================================== */
 .auth-modal {
     position: fixed;
     inset: 0;
-    z-index: $z-modal;
+    z-index: var(--z-modal);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -46,7 +44,7 @@
     max-width: 30rem;
     background-color: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: $radius-md;
+    border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     opacity: 0;
     transform: translateY(1rem) scale(0.98);
@@ -137,7 +135,7 @@
     gap: 0.5rem;
     padding: 0 1rem;
     border: 1px solid var(--color-border-strong);
-    border-radius: $radius-sm;
+    border-radius: var(--radius-sm);
     background-color: var(--color-surface);
 }
 
@@ -251,7 +249,7 @@
     width: 100%;
     padding: 0.875rem 1.5rem;
     border: none;
-    border-radius: $radius-sm;
+    border-radius: var(--radius-sm);
     background-color: var(--color-accent);
     color: var(--color-surface);
     font-weight: 600;
@@ -317,7 +315,7 @@
     padding: 0.875rem 1.5rem;
     background-color: var(--color-surface-alt);
     border: 1px solid var(--color-accent-outline);
-    border-radius: $radius-sm;
+    border-radius: var(--radius-sm);
     cursor: pointer;
     transition:
         background-color 0.2s ease,
@@ -420,11 +418,10 @@
 }
 
 
-// -----------------------------------------------------------------------------
-// Mobile Landscape Auth Modal
-// -----------------------------------------------------------------------------
+/* ==========================================================================
+   Mobile Landscape Auth Modal
+   ========================================================================== */
 @media (max-height: 450px) and (orientation: landscape) {
-
     .auth-modal {
         padding: 2.5rem 1rem 1rem;
     }
@@ -438,11 +435,10 @@
 }
 
 
-// -----------------------------------------------------------------------------
-// Tablet Auth Modal
-// -----------------------------------------------------------------------------
-@media (min-width: $breakpoint-tablet) {
-
+/* ==========================================================================
+   Tablet Auth Modal
+   ========================================================================== */
+@media (min-width: 768px) {
     .auth-modal {
         align-items: center;
     }
@@ -473,11 +469,10 @@
 }
 
 
-// -----------------------------------------------------------------------------
-// Desktop Auth Modal
-// -----------------------------------------------------------------------------
-@media (min-width: $breakpoint-desktop) {
-
+/* ==========================================================================
+   Desktop Auth Modal
+   ========================================================================== */
+@media (min-width: 1024px) {
     .auth-modal {
         padding-top: 1rem;
     }

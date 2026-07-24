@@ -1,0 +1,161 @@
+/* =============================================================================
+   Light Theme (Default)
+   ============================================================================= */
+:root {
+    /* Brand */
+    --color-primary: #020617;
+    --color-primary-hover: #0f172a;
+    --color-secondary: #111827;
+    --color-secondary-hover: #1f2937;
+    --color-accent: #155e75;
+    --color-accent-hover: #0f4c5c;
+
+    /* Backgrounds */
+    --color-background: #cbd5e1;
+    --color-surface: #ffffff;
+    --color-surface-alt: #dbeafe;
+
+    /* Text */
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #475569;
+    --color-text-inverse: #ffffff;
+
+    /* Borders */
+    --color-border: #e2e8f0;
+    --color-border-strong: #cbd5e1;
+
+    /* Feedback */
+    --color-error: #dc2626;
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-info: #2563eb;
+
+    /* Spacing */
+    --space-2xs: 0.125rem;
+    /* 2px  - Extra Extra Small */
+    --space-xs: 0.25rem;
+    /* 4px  - Extra Small */
+    --space-sm: 0.5rem;
+    /* 8px  - Small */
+    --space-md: 0.75rem;
+    /* 12px - Medium */
+    --space-lg: 1rem;
+    /* 16px - Large */
+    --space-xl: 1.5rem;
+    /* 24px - Extra Large */
+    --space-2xl: 2rem;
+    /* 32px - Extra Extra Large */
+    --space-3xl: 3rem;
+    /* 48px - Triple Extra Large */
+
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    /* 8px  - Small */
+    --radius-md: 0.75rem;
+    /* 12px - Medium */
+    --radius-lg: 1rem;
+    /* 16px - Large */
+    --radius-xl: 1.5rem;
+    /* 24px - Extra Large */
+
+    --radius-full: 9999px;
+    --radius-circle: 50%;
+
+    /* Layering (Z-Index) */
+    --z-header: 100;
+    --z-dropdown: 200;
+    --z-modal: 1000;
+
+    /* Outline*/
+    --color-accent-outline: #155e75;
+
+    /* Interaction States */
+    --color-focus-background: rgba(21, 94, 117, 0.04);
+    --color-focus-ring: rgba(21, 94, 117, 0.12);
+    --color-focus-ring-strong: rgba(21, 94, 117, 0.18);
+    --color-hover-background: rgba(21, 94, 117, 0.06);
+    --color-active-background: rgba(21, 94, 117, 0.12);
+
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.18);
+
+    --shadow-overlay: 0 10px 25px rgba(15, 23, 42, 0.2);
+    --shadow-layered: 0 8px 16px rgba(15, 23, 42, 0.08), 0 2px 4px rgba(15, 23, 42, 0.04);
+    --shadow-media: 0 20px 40px rgba(15, 23, 42, 0.18), -16px 0 32px rgba(15, 23, 42, 0.12);
+    --shadow-button: 0 10px 20px rgba(21, 94, 117, 0.18);
+
+    /* Decorative */
+    --color-overlay-dark: rgba(15, 23, 42, 0.3);
+    --color-accent-glow: rgba(21, 94, 117, 0.12);
+    --color-pagination-bullet: rgba(255, 255, 255, 0.4);
+
+    /* Section Spacing */
+    --section-spacing-mobile: 2rem;
+    --section-spacing-tablet: 2.5rem;
+    --section-spacing-desktop: 3rem;
+
+    /* Hero */
+    --hero-background: #111827;
+    --hero-gradient-start: rgba(203, 213, 225, 0.35);
+    --hero-gradient-end: rgba(203, 213, 225, 0.05);
+
+    /* Footer */
+    --footer-background-start: #0a1a44;
+    --footer-background-end: #050f24;
+
+    --footer-text: #ffffff;
+    --footer-text-muted: rgba(255, 255, 255, 0.75);
+
+    --footer-link-hover: #60a5fa;
+
+    --footer-accent-blue: #3b82f6;
+    --footer-accent-green: #22c55e;
+    --footer-accent-yellow: #fbbf24;
+
+    --footer-border: rgba(255, 255, 255, 0.2);
+    --footer-icon-background: rgba(255, 255, 255, 0.08);
+}
+
+/* =============================================================================
+   Dark Theme Overrides
+   ============================================================================= */
+[data-theme="dark"] {
+    /* Brand */
+    --color-accent: #14532d;
+    --color-accent-hover: #166534;
+
+    /* Background */
+    --color-background: #020617;
+    --color-surface: #0f172a;
+    --color-surface-alt: #1e293b;
+
+    /* Text */
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #cbd5e1;
+    --color-text-inverse: #ffffff;
+
+    /* Borders */
+    --color-border: #334155;
+    --color-border-strong: #475569;
+
+    /* Feedback */
+    --color-error: #d36060;
+    --color-success: #16a34a;
+    --color-warning: #f59e0b;
+    --color-info: #2563eb;
+
+    /* Outline */
+    --color-accent-outline: #27a555;
+
+    /* Interaction States */
+    --color-focus-ring: rgba(21, 94, 117, 0.35);
+    --color-focus-ring-strong: rgba(21, 94, 117, 0.5);
+    --color-hover-background: rgba(255, 255, 255, 0.06);
+
+    /* Hero */
+    --hero-background: var(--color-background);
+    --hero-gradient-start: transparent;
+    --hero-gradient-end: transparent;
+}

@@ -10,7 +10,7 @@ export function initPlacementSlider() {
         spaceBetween: 16,
 
         pagination: {
-            el: ".swiper-pagination",
+            el: ".placement-support__swiper-pagination",
             clickable: true,
         },
 
