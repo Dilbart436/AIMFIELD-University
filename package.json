@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Dilbart436/AIMFIELD-University#readme",
   "devDependencies": {
+    "@easy-vite/plugin-html": "^4.2.1",
     "vite": "^8.0.16"
   }
 }
