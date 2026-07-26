@@ -1,29 +1,28 @@
 {
-  "name": "aimfield-university",
-  "version": "1.0.0",
-  "description": "A modern responsive university landing page built using:",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dilbart436/AIMFIELD-University.git"
-  },
-  "keywords": [],
-  "author": "Dilbart Basumatary",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dilbart436/AIMFIELD-University/issues"
-  },
-  "homepage": "https://github.com/Dilbart436/AIMFIELD-University#readme",
-  "devDependencies": {
-    "@easy-vite/plugin-html": "^4.2.1",
-    "vite": "^8.0.16"
-  }
+    "name": "aimfield-university",
+    "version": "1.0.0",
+    "description": "A modern responsive university landing page built using:",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "dev": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Dilbart436/AIMFIELD-University.git"
+    },
+    "keywords": [],
+    "author": "Dilbart Basumatary",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Dilbart436/AIMFIELD-University/issues"
+    },
+    "homepage": "https://github.com/Dilbart436/AIMFIELD-University#readme",
+    "devDependencies": {
+        "vite": "^8.0.16"
+    }
 }
