@@ -11,7 +11,7 @@
  */
 export function getUrl(path = "") {
     const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-    const normalizedPath = path.replace(/^\/+/, "");
+    const normalizedPath = path.trim().replace(/^\/+/, "");
 
     return normalizedPath
         ? `${base}/${normalizedPath}`

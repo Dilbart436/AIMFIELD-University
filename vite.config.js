@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig } from "vite";
 import { readdirSync } from "node:fs";
 import { relative, resolve } from "node:path";
 
@@ -44,16 +44,14 @@ function getHtmlEntries(rootDir = ".") {
     return entries;
 }
 
-export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, process.cwd(), "");
+export default defineConfig(({ mode }) => ({
+    base: mode === "production"
+        ? "/aimfield-university/"
+        : "/",
 
-    return {
-        base: env.VITE_BASE_URL,
-
-        build: {
-            rollupOptions: {
-                input: getHtmlEntries(),
-            },
+    build: {
+        rollupOptions: {
+            input: getHtmlEntries(),
         },
-    };
-});
+    },
+}));

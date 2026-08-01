@@ -1,3 +1,5 @@
+import { getUrl } from "../../utils/url.js";
+
 const footerMarkup = `
      <!-- Footer -->
    <footer class="footer">
@@ -7,7 +9,7 @@ const footerMarkup = `
             <!-- Branding -->
             <div class="footer__brand">
                <div class="footer__logo">
-                  <a href="/" class="footer__logo-link">
+                  <a href="${getUrl()}" class="footer__logo-link">
                      <div class="footer__logo-image">
                         <i class="fa-solid fa-graduation-cap footer__logo-icon"></i>
                      </div>
@@ -51,42 +53,42 @@ const footerMarkup = `
                <ul class="footer__links-list">
 
                   <li class="footer__links-item">
-                     <a href="/pages/about/" class="footer__links-link">
+                     <a href="${getUrl("pages/about/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>About Us</span>
                      </a>
                   </li>
 
                   <li class="footer__links-item">
-                     <a href="/pages/departments/" class="footer__links-link">
+                     <a href="${getUrl("pages/departments/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>Departments</span>
                      </a>
                   </li>
 
                   <li class="footer__links-item">
-                     <a href="/pages/programs/" class="footer__links-link">
+                     <a href="${getUrl("pages/programs/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>Programs</span>
                      </a>
                   </li>
 
                   <li class="footer__links-item">
-                     <a href="/pages/campus-life/" class="footer__links-link">
+                     <a href="${getUrl("pages/campus-life/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>Campus Life</span>
                      </a>
                   </li>
 
                   <li class="footer__links-item">
-                     <a href="/pages/admissions/" class="footer__links-link">
+                     <a href="${getUrl("pages/admissions/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>Admissions</span>
                      </a>
                   </li>
 
                   <li class="footer__links-item">
-                     <a href="/pages/news/" class="footer__links-link">
+                     <a href="${getUrl("pages/news/")}" class="footer__links-link">
                         <i class="fa-solid fa-chevron-right footer__links-icon"></i>
                         <span>News</span>
                      </a>
@@ -102,49 +104,49 @@ const footerMarkup = `
                <ul class="footer__programs-list">
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/bca/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/bca/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>BCA</span>
                      </a>
                   </li>
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/bba/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/bba/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>BBA</span>
                      </a>
                   </li>
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/bsc/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/bsc/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>BSc</span>
                      </a>
                   </li>
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/ba/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/ba/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>BA</span>
                      </a>
                   </li>
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/mba/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/mba/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>MBA</span>
                      </a>
                   </li>
 
                   <li class="footer__programs-item">
-                     <a href="/pages/programs/llb/" class="footer__programs-link">
+                     <a href="${getUrl("pages/programs/llb/")}" class="footer__programs-link">
                         <i class="fa-solid fa-book footer__programs-icon"></i>
                         <span>LLB</span>
                      </a>
                   </li>
                </ul>
 
-               <a href="/pages/programs/" class="footer__programs-cta">
+               <a href="${getUrl("pages/programs/")}" class="footer__programs-cta">
                   <span>View All Programs</span>
                   <i class="fa-solid fa-arrow-right"></i>
                </a>
@@ -281,15 +283,15 @@ const footerMarkup = `
 `;
 
 export function renderFooter() {
-    const footerElement = document.querySelector("#site-footer");
+   const footerElement = document.querySelector("#site-footer");
 
-    if (!footerElement) {
-        return;
-    }
+   if (!footerElement) {
+      return;
+   }
 
-    if (footerElement.hasChildNodes()) {
-        return;
-    }
+   if (footerElement.hasChildNodes()) {
+      return;
+   }
 
-    footerElement.insertAdjacentHTML("afterbegin", footerMarkup);
+   footerElement.insertAdjacentHTML("afterbegin", footerMarkup);
 }

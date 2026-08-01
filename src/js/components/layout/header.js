@@ -7,7 +7,7 @@ const headerMarkup = `
 
          <nav class="nav" aria-label="Primary navigation">
 
-            <a class="nav__brand" href="${getUrl("")}">
+            <a class="nav__brand" href="${getUrl()}">
                <i class="fa-solid fa-graduation-cap nav__logo" aria-hidden="true"></i>
                <span class="nav__brand-text">
                   <span class="nav__brand-name">
