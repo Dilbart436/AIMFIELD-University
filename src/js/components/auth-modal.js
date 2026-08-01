@@ -15,27 +15,27 @@
 // DOM Elements
 // -----------------------------------------------------------------------------
 // Modal
-const authModal = document.querySelector(".js-auth-modal");
-const authTriggers = document.querySelectorAll(".js-auth-trigger");
-const closeButton = document.querySelector(".js-auth-close");
-const overlay = document.querySelector(".js-auth-overlay");
+let authModal;
+let authTriggers;
+let closeButton;
+let overlay;
 // Form
-const authForm = document.querySelector(".js-auth-form");
-const emailInput = document.querySelector(".js-email-input");
-const passwordInput = document.querySelector(".js-password-input");
-const passwordToggle = document.querySelector(".js-password-toggle");
-const passwordIcon = passwordToggle.querySelector("i");
+let authForm;
+let emailInput;
+let passwordInput;
+let passwordToggle;
+let passwordIcon;
 // Actions
-const forgotPasswordLink = document.querySelector(".js-forgot-password");
-const modeToggle = document.querySelector(".js-mode-toggle");
+let forgotPasswordLink;
+let modeToggle;
 // Dynamic Content
-const authTitle = document.querySelector(".js-auth-title");
-const authDescription = document.querySelector(".js-auth-description");
-const authSubmit = document.querySelector(".js-auth-submit");
-const authSwitchText = document.querySelector(".js-auth-switch-text");
+let authTitle;
+let authDescription;
+let authSubmit;
+let authSwitchText;
 // Errors
-const emailError = document.querySelector(".js-email-error");
-const passwordError = document.querySelector(".js-password-error");
+let emailError;
+let passwordError;
 
 
 // -----------------------------------------------------------------------------
@@ -151,7 +151,7 @@ function handleModeToggle() {
 function handleFormSubmit(event) {
     event.preventDefault();
 
-    clearValidationErrors()
+    clearValidationErrors();
 
     const email = emailInput.value.trim();
     const password = passwordInput.value;
@@ -297,7 +297,35 @@ function bindEventListeners() {
 // Initialization
 // -----------------------------------------------------------------------------
 export function initAuthModal() {
-    if (!authModal) return;
+    // Modal
+    authModal = document.querySelector(".js-auth-modal");
+    authTriggers = document.querySelectorAll(".js-auth-trigger");
+    closeButton = document.querySelector(".js-auth-close");
+    overlay = document.querySelector(".js-auth-overlay");
+    // Form
+    authForm = document.querySelector(".js-auth-form");
+    emailInput = document.querySelector(".js-email-input");
+    passwordInput = document.querySelector(".js-password-input");
+    passwordToggle = document.querySelector(".js-password-toggle");
+
+    // Guard clause
+    if (!authModal) {
+        return;
+    }
+
+    passwordIcon = passwordToggle.querySelector("i");
+
+    // Actions
+    forgotPasswordLink = document.querySelector(".js-forgot-password");
+    modeToggle = document.querySelector(".js-mode-toggle");
+    // Dynamic Content
+    authTitle = document.querySelector(".js-auth-title");
+    authDescription = document.querySelector(".js-auth-description");
+    authSubmit = document.querySelector(".js-auth-submit");
+    authSwitchText = document.querySelector(".js-auth-switch-text");
+    // Errors
+    emailError = document.querySelector(".js-email-error");
+    passwordError = document.querySelector(".js-password-error");
 
     bindEventListeners();
 }

@@ -2,6 +2,9 @@
 import "../css/main.css";
 
 // Layout
+import { renderHeader } from "./components/layout/header.js";
+import { renderFooter } from "./components/layout/footer.js";
+// Layout Components
 import { initNavigation } from "./components/navigation.js";
 import { initMegaMenu } from "./components/mega-menu.js";
 // Components
@@ -14,6 +17,9 @@ import { initTheme } from "./components/theme.js";
 
 function initApp() {
     // Layout
+    renderHeader();
+    renderFooter();
+    // Layout Components
     initNavigation();
     initMegaMenu();
     // Components

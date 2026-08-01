@@ -9,8 +9,10 @@
 // -----------------------------------------------------------------------------
 // DOM Elements
 // -----------------------------------------------------------------------------
-const themeToggleButtons = document.querySelectorAll(".js-theme-toggle");
-const themeIcons = document.querySelectorAll(".nav__theme-icon");
+// const themeToggleButtons = document.querySelectorAll(".js-theme-toggle");
+// const themeIcons = document.querySelectorAll(".nav__theme-icon");
+let themeToggleButtons = [];
+let themeIcons = [];
 
 // -----------------------------------------------------------------------------
 // Constants
@@ -91,6 +93,9 @@ function bindEventListeners() {
 // Initialization
 // -----------------------------------------------------------------------------
 export function initTheme() {
+    themeToggleButtons = document.querySelectorAll(".js-theme-toggle");
+    themeIcons = document.querySelectorAll(".nav__theme-icon");
+
     if (themeToggleButtons.length === 0) return;
 
     initializeTheme();
