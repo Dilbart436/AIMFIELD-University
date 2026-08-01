@@ -1,27 +1,24 @@
 {
     "name": "aimfield-university",
     "version": "1.0.0",
-    "description": "A modern responsive university landing page built using:",
-    "main": "index.js",
-    "directories": {
-        "doc": "docs"
-    },
+    "description": "A production-ready, responsive university website built with HTML5, CSS, Vanilla JavaScript, and Vite.",
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",
+        "build:github": "vite build --mode github",
         "preview": "vite preview"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Dilbart436/AIMFIELD-University.git"
+        "url": "git+https://github.com/Dilbart436/aimfield-university.git"
     },
     "keywords": [],
     "author": "Dilbart Basumatary",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Dilbart436/AIMFIELD-University/issues"
+        "url": "https://github.com/Dilbart436/aimfield-university/issues"
     },
-    "homepage": "https://github.com/Dilbart436/AIMFIELD-University#readme",
+    "homepage": "https://github.com/Dilbart436/aimfield-university#readme",
     "devDependencies": {
         "vite": "^8.0.16"
     }
