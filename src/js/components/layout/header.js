@@ -1,3 +1,5 @@
+import { getUrl } from "../../utils/url.js";
+
 const headerMarkup = `
      <!-- Header -->
    <header class="header">
@@ -5,7 +7,7 @@ const headerMarkup = `
 
          <nav class="nav" aria-label="Primary navigation">
 
-            <a class="nav__brand" href="/">
+            <a class="nav__brand" href="${getUrl("")}">
                <i class="fa-solid fa-graduation-cap nav__logo" aria-hidden="true"></i>
                <span class="nav__brand-text">
                   <span class="nav__brand-name">
@@ -26,7 +28,7 @@ const headerMarkup = `
             <ul class="nav__links" id="primary-navigation">
 
                <li class="nav__item">
-                  <a class="nav__link" href="/pages/about/">About</a>
+                  <a class="nav__link" href="${getUrl("pages/about/")}">About</a>
                </li>
                <!-- Departments -->
                <li class="nav__item nav__item--mega">
@@ -49,37 +51,37 @@ const headerMarkup = `
                               <ul class="mega-menu__list">
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/science/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/science/")}">
                                        Science
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/arts/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/arts/")}">
                                        Arts
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/commerce/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/commerce/")}">
                                        Commerce
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/engineering/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/engineering/")}">
                                        Engineering
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/medical/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/medical/")}">
                                        Medical
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/departments/law/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/departments/law/")}">
                                        Law
                                     </a>
                                  </li>
@@ -87,7 +89,7 @@ const headerMarkup = `
                               </ul>
                            </div>
 
-                           <a class="mega-menu__cta" href="/pages/departments/">
+                           <a class="mega-menu__cta" href="${getUrl("pages/departments/")}">
                               <span>View All Departments</span>
                               <i class="fa-solid fa-arrow-right  mega-menu__cta-icon" aria-hidden="true">
                               </i>
@@ -107,7 +109,7 @@ const headerMarkup = `
                               Discover undergraduate and postgraduate opportunities across multiple disciplines.
                            </p>
 
-                           <a class="mega-menu__action" href="/pages/departments/">
+                           <a class="mega-menu__action" href="${getUrl("pages/departments/")}">
                               <span>Learn More</span>
                               <i class="fa-solid fa-arrow-right mega-menu__action-icon" aria-hidden="true">
                               </i>
@@ -137,38 +139,38 @@ const headerMarkup = `
 
                               <ul class="mega-menu__list">
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/campus-life/clubs/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/campus-life/clubs/")}">
                                        Clubs
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/campus-life/events/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/campus-life/events/")}">
                                        Events
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/campus-life/sports/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/campus-life/sports/")}">
                                        Sports
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/campus-life/hostels/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/campus-life/hostels/")}">
                                        Hostels
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/campus-life/gallery/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/campus-life/gallery/")}">
                                        Gallery
                                     </a>
                                  </li>
                               </ul>
                            </div>
 
-                           <a class="mega-menu__cta" href="/pages/campus-life/">
+                           <a class="mega-menu__cta" href="${getUrl("pages/campus-life/")}">
                               <span>Explore Campus Life</span>
                               <i class="fa-solid fa-arrow-right  mega-menu__cta-icon" aria-hidden="true"></i>
                            </a>
@@ -189,7 +191,7 @@ const headerMarkup = `
                               academics.
                            </p>
 
-                           <a class="mega-menu__action" href="/pages/campus-life/">
+                           <a class="mega-menu__action" href="${getUrl("pages/campus-life/")}">
                               <span>Discover More</span>
                               <i class="fa-solid fa-arrow-right mega-menu__action-icon" aria-hidden="true">
                               </i>
@@ -221,31 +223,31 @@ const headerMarkup = `
                               <ul class="mega-menu__list">
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/admissions/apply-online/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/admissions/apply-online/")}">
                                        Apply Online
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/admissions/eligibility-criteria/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/admissions/eligibility-criteria/")}">
                                        Eligibility Criteria
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/admissions/fee-structure/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/admissions/fee-structure/")}">
                                        Fee Structure
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/admissions/scholarships/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/admissions/scholarships/")}">
                                        Scholarships
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/admissions/important-dates/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/admissions/important-dates/")}">
                                        Important Dates
                                     </a>
                                  </li>
@@ -254,7 +256,7 @@ const headerMarkup = `
 
                            </div>
 
-                           <a class="mega-menu__cta" href="/pages/admissions/">
+                           <a class="mega-menu__cta" href="${getUrl("pages/admissions/")}">
                               <span>Start Your Application</span>
                               <i class="fa-solid fa-arrow-right  mega-menu__cta-icon" aria-hidden="true"></i>
                            </a>
@@ -275,7 +277,7 @@ const headerMarkup = `
                               postgraduate programs.
                            </p>
 
-                           <a class="mega-menu__action" href="/pages/admissions/">
+                           <a class="mega-menu__action" href="${getUrl("pages/admissions/")}">
                               <span>Apply Now</span>
                               <i class="fa-solid fa-arrow-right mega-menu__action-icon" aria-hidden="true"></i>
                            </a>
@@ -305,31 +307,31 @@ const headerMarkup = `
 
                               <ul class="mega-menu__list">
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/news/university-news/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/news/university-news/")}">
                                        University News
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/news/events-and-seminars/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/news/events-and-seminars/")}">
                                        Events & Seminars
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/news/research-highlights/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/news/research-highlights/")}">
                                        Research Highlights
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/news/student-stories/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/news/student-stories/")}">
                                        Student Stories
                                     </a>
                                  </li>
 
                                  <li class="mega-menu__item">
-                                    <a class="mega-menu__link" href="/pages/news/press-release/">
+                                    <a class="mega-menu__link" href="${getUrl("pages/news/press-releases/")}">
                                        Press Releases
                                     </a>
                                  </li>
@@ -338,7 +340,7 @@ const headerMarkup = `
 
                            </div>
 
-                           <a class="mega-menu__cta" href="/pages/news/">
+                           <a class="mega-menu__cta" href="${getUrl("pages/news/")}">
                               <span>View All News</span>
                               <i class="fa-solid fa-arrow-right  mega-menu__cta-icon" aria-hidden="true"></i>
                            </a>
@@ -359,7 +361,7 @@ const headerMarkup = `
                               community.
                            </p>
 
-                           <a class="mega-menu__action" href="/pages/news/">
+                           <a class="mega-menu__action" href="${getUrl("pages/news/")}">
                               <span>Read Latest News</span>
                               <i class="fa-solid fa-arrow-right mega-menu__action-icon" aria-hidden="true"></i>
                            </a>
@@ -373,7 +375,7 @@ const headerMarkup = `
                </li>
 
                <li class="nav__item">
-                  <a class="nav__link" href="/pages/contact/">Contact</a>
+                  <a class="nav__link" href="${getUrl("pages/contact/")}">Contact</a>
                </li>
                <!-- Preferences -->
                <li class="nav__item nav__item--preferences">
@@ -424,20 +426,20 @@ const headerMarkup = `
    </header> `;
 
 export function renderHeader() {
-    const headerElement = document.querySelector("#site-header");
+   const headerElement = document.querySelector("#site-header");
 
-    if (!headerElement) {
-        return;
-    }
+   if (!headerElement) {
+      return;
+   }
 
-    // Prevent duplicate rendering
-    // if (headerElement.children.length > 0) {
-    //     return;
-    // }
+   // Prevent duplicate rendering
+   // if (headerElement.children.length > 0) {
+   //     return;
+   // }
 
-    if (headerElement.hasChildNodes()) {
-        return;
-    }
+   if (headerElement.hasChildNodes()) {
+      return;
+   }
 
-    headerElement.insertAdjacentHTML("afterbegin", headerMarkup);
+   headerElement.insertAdjacentHTML("afterbegin", headerMarkup);
 }
